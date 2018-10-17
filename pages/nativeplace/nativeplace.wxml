@@ -1,0 +1,20 @@
+<view class='ding'>
+<view class='header'>
+  <view class='header-title'>籍贯</view>
+  <text class='header-contain'>请选择您的籍贯</text>
+</view>
+<view class='row'>
+  <text class='row-title'>籍贯</text>
+  <view class='city'>
+    <picker id='intentioncity1' mode="multiSelector" bindchange="regionChange" bindcolumnchange="regionColumnChange" value="{{regionIndex}}" range="{{regionArray}}" range-key='name'>
+      <view class="picker">
+       {{jobhunterForm.userNativeplace||(userNativeplace[0]+','+userNativeplace[1]+','+userNativeplace[2])}}
+      </view>
+    </picker>
+    <image class='b' src='/images/b.png'></image>
+  </view>
+</view>
+</view>
+<view class='submitBtn'>
+    <button hover-class='navigator-hover' class='btn' bindtap='submit'>保存</button>
+</view>

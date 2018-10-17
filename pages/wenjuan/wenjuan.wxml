@@ -1,0 +1,65 @@
+<form bindsubmit='submitForm'>
+<view wx:if='{{update=="work"}}' class='container'>
+  <view class='head-notice'>
+    <text>注：每记录一次工作经历，您的积分就会+5分，且每两个月只能记录一次。（请填写最近一次的呦~）</text>
+  </view>
+  <view class='item'>
+    <text class='item-lable'>入职时间</text>
+    <picker class='item-text' mode="date" name="accessionTime" start="2018-01-01" end="2019-12-30" bindchange="timeChange">
+    <text>{{time||workForm.accessionTime||"请选择"}}</text>
+  </picker>
+    <image class='item-right-icon' src='https://lezaixy.com/images/weixin/icon/right.png'></image>
+  </view>
+  <view class='item'>
+    <text class='item-lable'>公司名称</text>
+    <view class='item-input'>
+      <input placeholder='请输入您的公司名称' placeholder-style='color:#fcaf17;font-size: 20rpx;' value='{{workForm.companyName}}' name="companyName" bindblur="companyName" disabled='{{disabled}}'>
+    </input>
+    </view>
+  </view>
+  <view class='item'>
+    <text class='item-lable'>公司职务</text>
+    <view class='item-input'>
+        <input placeholder='请输入您的公司职务' placeholder-style='color:#fcaf17;font-size: 20rpx;' value='{{workForm.companyPostion}}' name="companyPostion" bindblur="companyPostion" disabled='{{disabled}}'>
+    </input>
+    </view>
+  </view>
+  <view class='item'>
+    <text class='item-lable'>工资待遇</text>
+    <picker class='item-text' name="wageIndex" bindchange="wageChange" value="{{wageIndex}}" range="{{options.wages}}" range-key="wageValue">
+    <text>{{wageValue||options.wages[workForm.wageId-1].wageValue||"请选择"}}</text>
+  </picker>
+    <image class='item-right-icon' src='https://lezaixy.com/images/weixin/icon/right.png'></image>
+  </view>
+
+</view>
+<view wx:else class='container'>
+  <view class='head-notice'>
+    <text>注：每记录一次实践经历，您的积分就会+5分，且每两个月只能记录一次。（请填写最近一次的呦~）</text>
+  </view>
+  <view class='item'>
+    <text class='item-lable'>实践时间</text>
+    <picker class='item-text' mode="date" name="practiceTime" start="2018-01-01" end="2019-12-30" bindchange="timeChange">
+    <text>{{time||practiceForm.practiceTime||"请选择"}}</text>
+  </picker>
+    <image class='item-right-icon' src='https://lezaixy.com/images/weixin/icon/right.png'></image>
+  </view>
+  <view class='item'>
+    <text class='item-lable'>实践地点</text>
+    <view class='item-input'>
+      <input placeholder='请输入您的时间地点' placeholder-style='color:#fcaf17;font-size: 20rpx;' value='{{practiceForm.practiceAddr}}' name="practiceAddr" bindblur="practiceAddr" disabled='{{disabled}}'>
+    </input>
+    </view>
+  </view>
+  <view class='item item-textarea'>
+    <text class='item-lable'>实践内容</text>
+    <view class='item-input-textarea'>
+    <textarea bindinput='practiceContent' name='practiceContent' placeholder="君不见黄河之水天上来，奔流到海不复回，君不见高堂 明镜悲白发，朝如青丝暮成雪，人生得意须尽欢。" value='{{practiceForm.practiceContent}}' placeholder-style='color:#fcaf17;font-size: 20rpx;line-height:35rpx;' />
+    </view>
+  </view>
+</view>
+
+<view class='submitBtn'>
+    <button hover-class='navigator-hover' class='btn' form-type='submit'>保存</button>
+</view>
+</form>

@@ -1,0 +1,15 @@
+<template name="newsitem">
+<navigator class='news-item' url="/pages/news_content/news_content?newsID={{item.newsId}}">
+      <view class='detail-logo'>
+        <image src='{{"https://lezaixy.com"+item.newsLogo}}' mode="aspectFill"></image>
+      </view>
+      <view class='news-content'>
+        <view class='news-title'>
+          <text class='news-title-text' decode="{{true}}">{{item.newsTitle}}</text>
+        </view>
+        <view class='news-date'>
+          <text class='news-date-text news-text-overflow' decode="{{true}}">{{item.newsTime}}</text>
+        </view>
+      </view>
+    </navigator>
+ </template>

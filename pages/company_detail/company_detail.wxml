@@ -1,0 +1,91 @@
+<scroll-view class='content' scroll-y style="width:100%;height:100%">
+  <view class='all'>
+    <view class='img-swiper'>
+      <swiper class='company_img' indicator-dots='true' duration='500' interval='5000' autoplay='true' circular='true'>
+        <swiper-item wx:for="{{data.companyImgs}}" wx:key="{{index}}">
+          <image style='width:100%;height:100%' src='{{"https://lezaixy.com"+item}}'></image>
+        </swiper-item>
+      </swiper>
+      <view class='swiper-bg'></view>
+    </view>
+    <view class='content'>
+      <view class='content-lable'>基本信息</view>
+
+      <view class='item' wx:if='{{data.companyName}}'>
+        <view class='icon'>
+          <image src='https://lezaixy.com/images/weixin/icon/company2.png' mode='aspectFit'></image>
+        </view>
+        <text decode='{{true}}' class='item-text'>{{data.companyName}}</text>
+      </view>
+
+      <view class='item' wx:if='{{data.sizeValue}}'>
+        <view class='icon'>
+          <image src='https://lezaixy.com/images/weixin/icon/size.png' mode='aspectFit'></image>
+        </view>
+        <text decode='{{true}}' class='item-text'>{{data.sizeValue}}</text>
+      </view>
+
+      <view class='item' wx:if='{data.companyContact}}'>
+        <view class='icon'>
+          <image src='https://lezaixy.com/images/weixin/icon/contact.png' mode='aspectFit'></image>
+        </view>
+        <text decode='{{true}}' class='item-text'>{{data.companyContact}}</text>
+      </view>
+
+      <view class='item' wx:if='{{data.companyTel||data.companyPhone}}'>
+        <view class='icon'>
+          <image src='https://lezaixy.com/images/weixin/icon/tel.png' mode='aspectFit'></image>
+        </view>
+        <text decode='{{true}}' wx:if='{{data.companyTel}}' class='spacer-right'>{{data.companyTel}}</text>
+        <text decode='{{true}}' class='item-text'>{{data.companyPhone}}</text>
+      </view>
+
+      <view class='item' wx:if='{{data.companyEmail}}'>
+        <view class='icon'>
+          <image src='https://lezaixy.com/images/weixin/icon/email.png' mode='aspectFit'></image>
+        </view>
+        <text decode='{{true}}' class='item-text'>{{data.companyEmail}}</text>
+      </view>
+      <view class='item' wx:if='{{data.address}}'>
+        <view class='icon'>
+          <image src='https://lezaixy.com/images/weixin/icon/addr.png' mode='aspectFit'></image>
+        </view>
+        <text decode='{{true}}' class='item-text'>{{data.address+(data.addressDetail||"")}}</text>
+      </view>
+
+      <view class='lezai-divider'></view>
+      <view class='content-lable'>招聘岗位</view>
+      <view class='recruiterjob'>
+        <block wx:for="{{data.jobs}}" wx:key="{{index}}">
+          <view class='jobitem'>
+            <text decode='{{true}}'>{{item}}</text>
+          </view>
+        </block>
+      </view>
+      <view class='lezai-divider'></view>
+      <view class='content-lable'>招聘信息</view>
+      <view class='item'>
+        <text decode='{{true}}' class='item-lable'>招聘人数</text>
+        <text decode='{{true}}' class='item-text'>{{data.recruitCount}}</text>
+      </view>
+      <view class='item'>
+        <text decode='{{true}}' class='item-lable'>平均薪资</text>
+        <text decode='{{true}}' class='item-text'>{{data.wageValue}}</text>
+      </view>
+      <view class='item'>
+        <text decode='{{true}}' class='item-lable'>公司福利</text>
+        <view class='welfare' wx:for="{{data.companyWelfares}}" wx:key="{{index}}">{{item}}</view>
+      </view>
+      <view class='lezai-divider'></view>
+      <view class='content-lable'>招聘简章</view>
+      <view class='info'>
+        <text class='item-text' decode='{{true}}'>&ensp;&ensp;&ensp;&ensp;{{data.companyInfo}}</text>
+      </view>
+      <view class='lezai-divider'></view>
+      <view class='btn-container'>
+        <view class='btn left-btn' bindtap='submit'>投递</view>
+        <view class='btn right-btn' bindtap='cancel'>取消</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

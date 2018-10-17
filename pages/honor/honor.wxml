@@ -1,0 +1,17 @@
+<view class='ding'>
+<view class='header'>
+  <view class='header-title'>荣誉</view>
+  <text class='header-contain'>请勾选您的荣誉，最多可选三个。</text>
+</view>
+<view class='item'>
+  <checkbox-group name="honorId" bindchange="honorChange">
+    <label class="checkbox row" wx:for="{{options.honors}}" wx:key="{{item.honorId}}" wx:for-item="item">
+      <text class='row-title'> {{item.honorValue}}</text>
+      <checkbox class='checkbox' value="{{item.honorId}}" checked='{{item.checked}}' />
+    </label>
+  </checkbox-group>
+</view>
+</view>
+<view class='submitBtn'>
+    <button hover-class='navigator-hover' class='btn' bindtap='submit'>保存</button>
+</view>

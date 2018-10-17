@@ -1,0 +1,60 @@
+.container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "幼圆";
+}
+.kongbai{
+  width: 100%;
+  height: 40rpx;
+}
+.item{
+  width: 650rpx;
+  height: 250rpx;
+  margin-top: 40rpx;
+  border-radius: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.item-icon1{
+  margin-left: 60rpx;
+  width: 160rpx;
+  height: 100rpx;
+}
+.item-icon2{
+  margin-left: 60rpx;
+  width: 110rpx;
+  height: 110rpx;
+}
+.item-icon3{
+  margin-left: 60rpx;
+  width: 110rpx;
+  height: 120rpx;
+}
+
+.item-text{
+  margin-left: 100rpx;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+.item-text-shorttab{
+  margin-left: 50rpx;
+}
+.item-btn{
+  margin-left: 70rpx;
+
+}
+
+.bkcolor1{
+  background-color: #f7a288;
+}
+
+.bkcolor2{
+  background-color: #fdc75c;
+}
+.bkcolor3{
+  background-color: #b75ed1;
+}

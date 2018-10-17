@@ -1,0 +1,26 @@
+
+<view class='container'>
+
+<block wx:for='{{messages}}' wx:key='{{index}}'>
+
+  <view class='message'>
+    <view class='message-title'  id='{{index}}' bindtap='choose'>
+      <text class='message-title-text'>{{messagetypes[item.messageType-1].typeValue}}：{{item.messageTitle}}</text>
+      <text class='message-title-time'>{{item.messageTime}}</text>
+      <image class='message-detail-icon' src='https://lezaixy.com/images/weixin/icon/{{detail[index]==false?"down":"up"}}.png'></image>
+    </view>
+     <view class='message-content' hidden='{{!detail[index]}}'>
+      <text class='message-content-text'>{{item.messageContext}}</text>
+    </view>
+  </view>
+
+  </block>
+
+
+  <view class='bottom'></view>
+
+
+</view>
+
+<view class="loadmore loading" wx:if="{{ hasMore }}">正在加载...</view>
+<view class="loadmore" wx:else>已经到底了</view>

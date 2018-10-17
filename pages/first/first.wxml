@@ -1,0 +1,7 @@
+<view class="contain">
+  <view class="btn-group">
+    <view class='btn' bindtap='zhuce' id="1"><text>我要兼职</text></view>
+    <view class='btn' bindtap='zhuce' id="2"><text>我有技能</text></view>
+    <view class='btn' bindtap='zhuce' id="3"><text>我想就业</text></view>
+  </view>
+</view>

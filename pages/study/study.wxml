@@ -1,0 +1,57 @@
+<view class='ding'>
+<view class='header'>
+  <view class='header-title'>学校信息</view>
+  <text class='header-contain'>请填写您个人的学校信息</text>
+</view>
+<view class='row'>
+  <text class='row-title'>我的学号:</text>
+  <input type='text' name="userSno" class='xuehao' value='{{jobhunterForm.userSno}}' bindblur='userSnoChange' placeholder='请输入您的学号' placeholder-style='font-weight: 300;font-size: 35rpx;'></input>
+</view>
+
+<view class='row'>
+  <view class='row-title'>毕业时间:</view>
+  <picker mode="date" name="userGraduatetime"  start="2015-01-01" end="2025-01-01" fields="year" bindchange="userGraduatetimeChange">
+    <view class="picker">
+      {{userGraduatetime||jobhunterForm.userGraduatetime||"请选择"}}{{userGraduatetime||jobhunterForm.userGraduatetime?"年":""}}
+    </view>
+  </picker>
+  <image class='b' src='/images/b.png'></image>
+</view>
+
+<view class='row'>
+  <view class='row-title'>专业分类:</view>
+  <picker bindchange="specialChange" range="{{options.specials}}" range-key="specialValue">
+    <view class="picker">
+      {{specialValue||options.specials[jobhunterForm.specialId-1].specialValue||"请选择"}}
+    </view>
+  </picker>
+  <image class='b' src='/images/b.png'></image>
+</view>
+<view class='row'>
+  <view class='row-title'>所学专业:</view>
+  <input type='text' class='school' name="specialdetailed" value='{{jobhunterForm.specialdetailed}}' bindblur="specialdetailed" placeholder='请输入您所学的专业' placeholder-style='font-weight: 300;font-size: 35rpx;'></input>
+</view>
+
+<view class='row'>
+  <text class='row-title'>我的学历:</text>
+  <picker name="educationIndex" bindchange="educationChange" class="xueli" value="{{educationIndex}}" range="{{options.educations}}" range-key="educationValue">
+    <view class="picker">
+      {{educationValue||options.educations[jobhunterForm.educationId-1].educationValue||"请选择"}}
+    </view>
+  </picker>
+  <image class='b' src='/images/b.png'></image>
+</view>
+<view class='row'>
+  <view class='row-title'>工作经验:</view>
+  <picker bindchange="experienceChange" name="experienceIndex" value="{{experienceIndex}}" range="{{options.experiences}}" range-key="experienceValue">
+    <view class="picker">
+      {{experienceValue||options.experiences[jobhunterForm.experienceId-1].experienceValue||"请选择"}}
+    </view>
+  </picker>
+  <image class='b' src='/images/b.png'></image>
+</view>
+
+</view>
+<view class='submitBtn'>
+    <button hover-class='navigator-hover' class='btn' bindtap='submit'>保存</button>
+</view>

@@ -1,0 +1,42 @@
+<view class='ding'>
+<view class='header'>
+  <view class='header-title'>意向城市</view>
+  <text class='header-contain'>请选择您的意向城市，可选三个</text>
+</view>
+<view class='row'>
+  <text class='row-title'>意向城市</text>
+  <view class='city'>
+    <picker id='intentioncity1' mode="multiSelector" bindchange="regionChange" bindcolumnchange="regionColumnChange" value="{{regionIndex}}" range="{{regionArray}}" range-key='name'>
+      <view class="picker">
+       {{jobhunterForm.intentioncitys[0]||(intentioncity1[0]+','+intentioncity1[1]+','+intentioncity1[2])}}
+      </view>
+    </picker>
+    <image class='b' src='/images/b.png'></image>
+  </view>
+</view>
+<view class='row'>
+  <text class='row-title'>意向城市</text>
+  <view class='city'>
+    <picker id='intentioncity2' mode="multiSelector" bindchange="regionChange" bindcolumnchange="regionColumnChange" value="{{regionIndex}}" range="{{regionArray}}" range-key='name'>
+      <view class="picker">
+        {{jobhunterForm.intentioncitys[1]||(intentioncity2[0]+','+intentioncity2[1]+','+intentioncity2[2])}}
+      </view>
+    </picker>
+    <image class='b' src='/images/b.png'></image>
+  </view>
+</view>
+<view class='row'>
+  <text class='row-title'>意向城市</text>
+  <view class='city'>
+    <picker id='intentioncity3' mode="multiSelector" bindchange="regionChange" bindcolumnchange="regionColumnChange" value="{{regionIndex}}" range="{{regionArray}}" range-key='name'>
+      <view class="picker">
+        {{jobhunterForm.intentioncitys[2]||(intentioncity3[0]+','+intentioncity3[1]+','+intentioncity3[2])}}
+      </view>
+    </picker>
+    <image class='b' src='/images/b.png'></image>
+  </view>
+</view>
+</view>
+<view class='submitBtn'>
+    <button hover-class='navigator-hover' class='btn' bindtap='submit'>保存</button>
+</view>

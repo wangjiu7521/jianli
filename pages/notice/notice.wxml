@@ -1,0 +1,12 @@
+<view class='hea'>
+<text class="header">信息数据提交须知</text>
+</view>
+<view class='container'>
+<text class='body' decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;您好！我们平台是从事于帮大学生寻找到心仪工作的微信平台。不仅仅是企业选择学生，学生选择企业可以实现，您可以选择心仪的兼职、岗位去投报工作。
+&nbsp;&nbsp;&nbsp;&nbsp;若您不想要企业查看自己的信息，可在人才入驻页面中调节自身状态下是<text class='key'>择业中</text>，那么企业将不会打扰您！
+&nbsp;&nbsp;&nbsp;&nbsp;谢谢您的关注及支持！
+&nbsp;&nbsp;&nbsp;&nbsp;注：信息填写越详细，则越能增加自己在企业中的竞争力度，越能提高自己在意向岗位人群中的总排名。
+&nbsp;&nbsp;&nbsp;&nbsp;当您关注微信平台次数达到要求后，我们将会为您推荐有详细数据的知名企业，不会为您的学习、生活带来困扰！</text>
+</view>
+<view class='button'>
+</view>

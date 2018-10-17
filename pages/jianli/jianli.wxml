@@ -1,0 +1,154 @@
+<!-- <view class="loadmore loading" wx:if="{{ jobhunter==null }}">正在加载...</view> -->
+<view class="container">
+
+<view class='item'>
+  <view class='item-lable'>
+    <text class='item-lable-text'>学校信息</text>
+  </view>
+  <view class='item-detail school-detail'>
+    <view class='school-detail-content'>
+      <view class='school-detail-content-item'>
+        <text class='school-item-lable'>我的学号：</text><text class='school-item-text'>{{jobhunterShow.userSno||""}}</text>
+      </view>
+      <view class='school-detail-content-item'>
+        <text class='school-item-lable'>毕业时间：</text><text class='school-item-text'>{{jobhunterShow.userGraduatetime}}{{jobhunterShow.userGraduatetime==""?"":"年"}}</text>
+      </view>
+      <view class='school-detail-content-item'>
+        <text class='school-item-lable'>专业分类：</text><text class='school-item-text'>{{jobhunterShow.specialValue}}</text>
+      </view>
+      <view class='school-detail-content-item'>
+        <text class='school-item-lable'>所学专业：</text><text class='school-item-text'>{{jobhunterShow.specialdetailed}}</text>
+      </view>
+      <view class='school-detail-content-item'>
+        <text class='school-item-lable'>学历：</text><text class='school-item-text'>{{jobhunterShow.educationValue}}</text>
+      </view>
+      <view class='school-detail-content-item'>
+        <text class='school-item-lable'>工作经验：</text><text class='school-item-text'>{{jobhunterShow.experienceValue}}</text>
+      </view>
+    </view>
+    <navigator class='item-detail-icon' url='/pages/study/study'>
+      <image src='https://lezaixy.com/images/weixin/icon/edit.png'></image>
+    </navigator>
+  </view>
+</view>
+
+<view class='item'>
+  <view class='item-lable'>
+    <text class='item-lable-text'>证书荣誉</text>
+  </view>
+  <view class='item-detail certificate-detail'>
+    <view class='certificate-lable'>
+    <text class='certificate-lable-text'>证书</text>
+    <navigator class='item-detail-icon' url='/pages/certificate/certificate'>
+      <image src='https://lezaixy.com/images/weixin/icon/edit.png'></image>
+    </navigator>
+  </view>
+    <view class='certificate-detail-content'>
+      <block wx:for="{{jobhunterShow.certificateValues}}" wx:key='{{index}}'>
+        <view class='certificate-detail-item'><text>{{item}}</text></view>
+      </block>
+    </view>
+  </view>
+  <view class='item-detail certificate-detail'>
+    <view class='certificate-lable'>
+    <text class='certificate-lable-text'>荣誉</text>
+    <navigator class='item-detail-icon' url='/pages/honor/honor'>
+      <image src='https://lezaixy.com/images/weixin/icon/edit.png'></image>
+    </navigator>
+  </view>
+    <view class='certificate-detail-content'>
+      <block wx:for="{{jobhunterShow.honorValues}}" wx:key='{{index}}'>
+        <view class='certificate-detail-item'><text>{{item}}</text></view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<view class='item'>
+  <view class='item-lable'>
+    <text class='item-lable-text'>就业信息</text>
+  </view>
+  <view class='item-detail certificate-detail'>
+    <view class='certificate-lable'>
+    <text class='certificate-lable-text'>意向城市</text>
+    <navigator class='item-detail-icon' url='/pages/intention/intention'>
+      <image src='https://lezaixy.com/images/weixin/icon/edit.png'></image>
+    </navigator>
+  </view>
+    <view class='work-detail-content'>
+      <block wx:for="{{jobhunterShow.intentioncitys}}" wx:key='{{index}}'>
+        <view class='work-detail-item'><text>{{item}}</text></view>
+      </block>
+    </view>
+  </view>
+  <view class='item-detail certificate-detail'>
+    <view class='certificate-lable'>
+    <text class='certificate-lable-text'>籍贯</text>
+    <navigator class='item-detail-icon' url='/pages/nativeplace/nativeplace'>
+      <image src='https://lezaixy.com/images/weixin/icon/edit.png'></image>
+    </navigator>
+  </view>
+    <view class='work-detail-content'>
+      <view class='work-detail-item'><text>{{jobhunterShow.userNativeplace}}</text></view>
+    </view>
+  </view>
+  <view class='item-detail certificate-detail'>
+    <view class='certificate-lable'>
+    <text class='certificate-lable-text'>意向岗位</text>
+    <navigator class='item-detail-icon' url='/pages/intentionjob/intentionjob'>
+      <image src='https://lezaixy.com/images/weixin/icon/edit.png'></image>
+    </navigator>
+  </view>
+    <view class='work-detail-content'>
+      <block wx:for="{{jobhunterShow.intentionjobValues}}" wx:key='{{index}}'>
+        <view class='work-detail-item'><text>{{item}}</text></view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<view class='item'>
+  <view class='item-lable'>
+        <text class='item-lable-text intro-lable-text'>自我介绍</text>
+        <text class='intro-lable-text-small'>（请填写您的自我介绍，有助于别人了解你）</text>
+  </view>
+  <view class='item-detail intro-detail'>
+    <view class='intro-detail-content'>
+      <text class='intro-text' decode="{{true}}">&ensp;&ensp;&ensp;&ensp;{{jobhunterShow.userIntroduction||"用一两句见简单的语言来描述一下自己。"}}</text>
+    </view>
+    <navigator class='item-detail-icon' url='/pages/intro/intro?page=jobhunter'>
+      <image src='https://lezaixy.com/images/weixin/icon/edit.png'></image>
+    </navigator>
+  </view>
+</view>
+
+<view class='item' wx:if='{{ jobhunter == null || jobhunterShow.referrerValue}}'>
+  <view class='item-detail certificate-detail'>
+    <view class='certificate-lable'>
+    <text class='certificate-lable-text'>我的伯乐</text>
+    <navigator wx:if="{{jobhunter == null}}" class='item-detail-icon' url='/pages/referrer/referrer'>
+      <image src='https://lezaixy.com/images/weixin/icon/edit.png'></image>
+    </navigator>
+  </view>
+    <view class='work-detail-content'>
+      <text class='work-detail-item' wx:if='{{jobhunterShow.referrerValue}}'>{{jobhunterShow.referrerValue}}</text>
+    </view>
+  </view>
+  
+</view>
+
+  <view class='xieyi' wx:if="{{jobhunter == null}}">
+    <view class='xieyi-check' bindtap='xieyi'><view hidden='{{gou==false}}' class='xieyi-checked'></view></view>
+    <view class='xieyi-text' bindtap='onTap1' >
+      信息数据提交须知
+    </view>
+  </view>
+  <view class='kongbai'></view>
+  <button wx:if="{{jobhunter == null}}" hover-class='navigator-hover' class='btn' bindtap='submit'>确认</button>
+
+</view>
+
+
+
+
+

@@ -1,0 +1,24 @@
+<!--pages/specialty/specialty.wxml-->
+<view class='ding'>
+<view class='header'>
+  <view class='header-title'>特长</view>
+  <text class='header-contain'>请勾选您的特长，最多可选三个。</text>
+</view>
+<view class='item'>
+  <checkbox-group name="specialtyId" bindchange="specialtyChange">
+    <label class="checkbox" wx:for="{{options.specialtys}}" wx:key="{{item.specialtyId}}" wx:for-item="item">
+      <view class='row' wx:if="{{item.specialtyId!=1}}">
+      <text class='row-title'> {{item. specialtyValue}}</text>
+        <checkbox class='checkbox' value="{{item.specialtyId}}" checked='{{item.checked}}' />
+      </view>
+    </label>
+    <view class='checkbox row'>
+     <text class='row-title'> {{options.specialtys[0]. specialtyValue}}</text>
+      <checkbox class='checkbox' value="{{options.specialtys[0].specialtyId}}" checked='{{options.specialtys[0].checked}}' />
+    </view>
+  </checkbox-group>
+</view>
+</view>
+<view class='submitBtn'>
+    <button hover-class='navigator-hover' class='btn' bindtap='submit'>保存</button>
+</view>

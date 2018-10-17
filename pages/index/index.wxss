@@ -1,0 +1,158 @@
+@import "../../templates/newsitem.wxss";
+
+.container-index{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  /* font-family: "YouYuan"; */
+}
+.swiper{
+  margin-top: 42rpx;
+  width: 670rpx;
+  height: 300rpx;
+  border-radius: 14rpx;
+}
+
+.swiper-img{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-img image{
+  width: 100%;
+  height: 100%;
+}
+.kapiancaidan{
+  margin-top: 42rpx;
+  width: 670rpx;
+  height: 125rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.caidan-btn{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon{
+  width: 80rpx;
+  height: 80rpx;
+
+}
+.icon-text{
+  margin-top: 7rpx;
+  font-size: 20rpx;
+  font-family: "YouYuan";
+}
+
+.more{
+  margin-top: 47rpx;
+  width: 100%;
+  height: 60rpx;
+  background-color: #efecec;
+  font-size: 34rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between; 
+  align-items: center;
+}
+
+.more-title{
+    height: 60rpx;
+    line-height:  60rpx;
+    text-align: center;
+    margin-left: 62rpx;
+}
+.more-text{
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: 41rpx;
+}
+.more-text-word{
+    height: 60rpx;
+    line-height:  60rpx;
+    text-align: center;
+    margin-right: 22rpx;
+}
+.more-text-icon{
+  width: 26rpx;
+  height: 35rpx;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.company-scroll{
+  margin-top: 50rpx;
+  width: 650rpx;
+  white-space: nowrap;
+}
+.company-block{
+  width: 25%;
+  height: 155rpx;
+  display: inline-block;
+  white-space: nowrap;
+}
+.company{
+  width: 100%;
+  height: 155rpx;
+  margin-right: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  align-items: center; 
+  justify-content: center;
+
+}
+.company-logo{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background-color: #e5e5e5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; 
+  justify-content: center;
+}
+.company-logo image{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+
+
+ .company-content{
+  width: 140rpx;
+  margin-top: 10rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.company-name{
+
+  font-size: 20rpx;
+  color: black;
+}
+
+.kongbai{
+  width: 100%;
+  height: 50rpx;
+}

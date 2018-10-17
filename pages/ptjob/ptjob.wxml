@@ -1,0 +1,69 @@
+<view class='find' wx:if="{{ parttimerShow==null }}">
+  <view class='find-content'>
+    <view class='find-lable'>补全兼职信息</view>
+    <navigator class='find-btn' url='/pages/signin/signin'>去填写</navigator>
+  </view>
+</view>
+<view class="container" wx:else>
+
+  <view class='item item-heigh'>
+
+    <view class='item-content item-content2'>
+
+      <view class='item-content-lable' id='job' bindtap='choose'>
+        <view class='item-content-lable-left'>意向兼职</view>
+        <view class='item-content-lable-right'>{{parttimerShow.intentionparttimeValues.length}}个</view>
+      </view>
+      <view class='detail' hidden='{{job_detail}}'>
+        <block wx:for='{{parttimerShow.intentionparttimeValues}}' wx:key="{{index}}">
+          <view class="job-item check detail-item">
+            <text>{{item}}</text>
+          </view>
+        </block>
+      </view>
+
+      <view class='item-content-lable' id='addr' bindtap='choose'>
+        <view class='item-content-lable-left'>兼职地点</view>
+        <view class='item-content-lable-right'>{{parttimerShow.parttimeaddrValues.length}}个</view>
+      </view>
+      <view class='detail' hidden='{{addr_detail}}'>
+        <block wx:for='{{parttimerShow.parttimeaddrValues}}' wx:key="{{index}}">
+          <view class="addr-item check detail-item">
+            <text>{{item}}</text>
+          </view>
+        </block>
+      </view>
+
+      <view class='item-content-lable' id='worktime' bindtap='choose'>
+        <view class='item-content-lable-left'>兼职时间</view>
+        <view class='item-content-lable-right'>{{parttimerShow.worktimeValues.length}}个</view>
+      </view>
+      <view class='detail' hidden='{{worktime_detail}}'>
+        <block wx:for='{{parttimerShow.worktimeValues}}' wx:key="{{index}}">
+          <view class="worktime-item detail-item check">
+            <text>{{item}}</text>
+          </view>
+        </block>
+      </view>
+
+      <view class='item-content-lable'>
+        <view class='item-content-lable-left'>兼职状态</view>
+        <view class='item-content-lable-right'>
+          <switch bindchange='stateChange' color='#fcaf17' checked='{{parttimerShow.parttimerState}}'></switch>
+        </view>
+      </view>
+
+    </view>
+
+    <view class='item-edit'>
+      <navigator hover-class='nobk' url='/pages/signin/signin?state=2'>
+        <image class='item-edit-icon' src='https://lezaixy.com/images/weixin/icon/edit.png'></image>
+      </navigator>
+    </view>
+
+  </view>
+
+
+
+
+</view>

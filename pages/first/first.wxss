@@ -1,0 +1,44 @@
+page {
+  font-family: MicroSoft Yahei;
+  color: #353535;
+  font-size: 30rpx;
+  height: 100%;
+  display: flex;
+  flex: row;
+  justify-content:center;
+}
+
+.contain{
+  background-image: url("https://lezaixy.com/images/weixin/bgimg/first-bgimg.jpg");
+  background-color: #faf9f9;
+  background-size: 100% 100%;
+  margin-top: 170rpx;
+  width: 680rpx;
+  height: 630rpx;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+
+}
+
+.btn-group{
+
+  margin-top: 165rpx;
+  width: 500rpx;
+  height: 360rpx;
+  display: flex;
+  flex-direction:column ;
+  align-items: center;
+  justify-content:space-between;
+}
+
+.btn{
+
+  width: 325rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  color: #fcaf17;
+  font-size: 36rpx;
+}

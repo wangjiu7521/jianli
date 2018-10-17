@@ -1,0 +1,18 @@
+<import src="../../templates/companyitem.wxml" />
+<view class='container'>
+  <view class='find'>
+    <view class='find-content'>
+      <view id='1' class='find-btn resume-btn' hover-class='btn-hover' bindtap='btnclick'>我关注的企业</view>
+      <view id='2' class='find-btn resume-btn' hover-class='btn-hover' bindtap='btnclick'>关注我的企业</view>
+    </view>
+  </view>
+
+  <block wx:for="{{recruiters}}" wx:key="{{index}}">
+    <template is="companyitem" data="{{item}}" />
+  </block>
+
+  <view class='kongbai'></view>
+
+</view>
+<view class="loadmore loading" wx:if="{{ hasMore }}">正在加载...</view>
+<view class="loadmore" wx:else>已经到底了</view>

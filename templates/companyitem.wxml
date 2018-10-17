@@ -1,0 +1,38 @@
+<template name="companyitem">
+  <navigator class='companyitem' url='/pages/company_detail/company_detail?companyID={{item.companyId}}'>
+    <view class='detail-logo'>
+      <image src='{{"https://lezaixy.com"+item.companyLogo}}' mode="aspectFill"></image>
+    </view>
+    <view class='detail-content'>
+      <view class='content-item space-between'>
+        <view class='job' wx:if='{{item.jobs.length >0}}'>
+          <text class='job-name text-overflow'>{{item.jobs[0].intentionjobValue}}</text>
+          <text class='job-count text-overflow'>{{item.jobs[0].jobCount}}</text>
+        </view>
+        <text wx:else class='text-overflow'>暂无招聘职位</text>
+        <view class='job' wx:if='{{item.jobs.length >1}}'>
+          <text class='job-name text-overflow'>{{item.jobs[1].intentionjobValue}}</text>
+          <text class='job-count text-overflow'>{{item.jobs[1].jobCount}}</text>
+        </view>
+      </view>
+      <view class='content-item'>
+        <view class='company-name'>
+        <view class='icon'>
+          <image class='company-icon' src='https://lezaixy.com/images/weixin/icon/company.png' mode='aspectFit'></image>
+        </view>
+          <text class='company-name-text text-overflow'>{{item.companyName}}</text>
+        </view>
+        <text class='money text-overflow'>{{item.wageValue}}</text>
+      </view>
+      <view class='content-item'>
+        <view class='addr'>
+        <view class='icon'>
+          <image class='addr-icon' src='https://lezaixy.com/images/weixin/icon/addr1.png' mode='aspectFit'></image>
+        </view>
+          <text class='addr-text text-overflow'>{{item.address}}</text>
+        </view>
+        <text class='company-date text-overflow'>{{item.companyUpdatetime}}</text>
+      </view>
+    </view>
+  </navigator>
+</template>

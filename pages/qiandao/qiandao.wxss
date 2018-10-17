@@ -1,0 +1,21 @@
+page{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  /* align-items: center; */
+}
+.qiandao{
+  margin-top: 160rpx;
+  width: 522rpx;
+  height: 688rpx;
+  padding: 0;
+}
+
+.qiandao image{
+  width: 100%;
+  height: 99%;
+}

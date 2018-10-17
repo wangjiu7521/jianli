@@ -1,0 +1,50 @@
+<view class='container'>
+  <view class='lable'>
+    <text class='lable-text'>积分规则：如何获得成长值</text>
+  </view>
+  <view class='lable'>
+    <text class='lable-text'>一、正确的登录方式</text>
+  </view>
+
+  <view class='detail'>
+    <text class='detail-text'>1.首次注册登录即可获得30点成长值</text>
+    <text class='detail-text'>2.完善兼职信息即可获得20点成长值</text>
+    <text class='detail-text'>3.完善技能信息即可获得10点成长值</text>
+    <text class='detail-text'>4.完善就业信息即可获得40点成长值</text>
+    <text class='detail-text'>5.此后登录小程序即可得1点成长值，若为连续登</text>
+    <text class='detail-text' decode='{{true}}'>&ensp;&ensp;录天数递增，单日最高可获取5成长值</text>
+  </view>
+  <view class='lable'>
+    <text class='lable-text'>二、完善你的三围</text>
+  </view>
+  <view class='detail'>
+    <text class='detail-text'>1.每添加一张证书审核通过即可得5成长值</text>
+    <text class='detail-text'>2.每添加一次实践经历得5成长值</text>
+  </view>
+  <view class='lable'>
+    <text class='lable-text'>三、参与人才论坛互动</text>
+    <text class='lable-text-small'>（此类任务多刷多得，记得完成哦~）</text>
+  </view>
+  <view class='detail'>
+    <text class='detail-text'>1.发布一次得1成长值，经审核通过再得5经验值，获得点赞、转发、评论均得1成长值，且累计</text>
+    <text class='detail-text'>2.给他人的话题点赞评论，每次得1成长值，单日最高10成长值</text>
+    <text class='detail-text'>3.分享话题的内容或小程序到微信好友及朋友圈， 单次获得2成长值，若好友未注册过小程序，且点击之后注册成功，邀请者得10成长</text>
+  </view>
+
+  <view class='lable'>
+    <text class='lable-text'>详情</text>
+    <text class='lable-text-detail'>我们会根据您的积分多少来给您的活跃等级一个相应的称号， 共分为9个等级</text>
+  </view>
+  <view class='detail'>
+    <text class='detail-text detail-text-shorttab'>第1级:校园学渣, 0~100分;</text>
+    <text class='detail-text detail-text-shorttab'>第2圾:校园学酥，101~200分;</text>
+    <text class='detail-text detail-text-shorttab'>第3级:校园学霸，201~300分;</text>
+    <text class='detail-text detail-text-shorttab'>第4级:职场小白, 301~500分;</text>
+    <text class='detail-text detail-text-shorttab'>第5级:职场新秀, 501~800分;</text>
+    <text class='detail-text detail-text-shorttab'>第6级:职场达人，801~1200分;</text>
+    <text class='detail-text detail-text-shorttab'>第7级:都市金领，1201~1800分;</text>
+    <text class='detail-text detail-text-shorttab'>第8级:城市精英, 1801~2400分;</text>
+    <text class='detail-text detail-text-shorttab'>第9級:霸道总裁, 2401~-3000分</text>
+  </view>
+  <view class='kongbai'></view>
+</view>

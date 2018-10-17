@@ -1,0 +1,120 @@
+.page-bg{
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  width: 100%;
+  height: 425rpx;
+  background-image: url("https://lezaixy.com/images/weixin/bgimg/jiben-bgimg.jpg");
+  background-size: 100% 100%;
+}
+.page-content-bg{
+  position: absolute;
+  z-index: -5;
+  top: 425rpx;
+  width: 100%;
+  height: 410rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-content-bg view{
+  width: 680rpx;
+  height: 410rpx;
+  background-color: #faf9f9;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.header{
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  align-items: center;
+  justify-content: start;
+  width: 640rpx;
+  height: 230rpx;
+  color: #fbf7f5;
+  font-size: 18rpx;
+}
+.header-icon{
+  box-sizing: border-box;
+  margin-top: 40rpx;
+  margin-bottom: 5rpx;
+  background-color: #eeeeee;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-icon image{
+  width: 100%;
+  height: 100%;
+}
+.form{
+  width: 640rpx;
+  background-color: white;
+}
+
+.form-item{
+  width: 100%;
+  height: 80rpx;
+  color: #3d3b3b;
+  font-size: 30rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.form-item-label{
+  height: 100%;
+  width: 165rpx;
+  margin-left: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.form-item-text{
+  height: 100%;
+  width: 415rpx;
+  display: flex;
+  align-items: center;
+}
+.tel-text{
+  width: 290rpx;
+}
+.code-btn{
+  width: 130rpx;
+  height: 40rpx;
+  border: 1rpx solid #fcaf17;
+  border-radius: 5rpx;
+  font-size: 20rpx;
+  color: #9c9c9c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn{
+  width: 650rpx;
+  height: 70rpx;
+  color: white;
+  font-size: 14px;
+  background-color: #fcaf17;
+  border-radius: 5rpx;
+  margin-bottom: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.kongbai{
+  width: 100%;
+  height: 130rpx;
+}

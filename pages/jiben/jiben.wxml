@@ -1,0 +1,69 @@
+<view class="page-bg"></view>
+<view class="page-content-bg">
+  <view></view>
+</view>
+<view class='container'>
+  <view class='header'>
+    <view class='header-icon'>
+      <image bindtap='choosePhoto' src='{{userPhotoUrl}}'> </image>
+    </view>
+    <text>{{userPhotoUrl==img?"请上传头像":"更换头像"}}</text>
+  </view>
+  <view class='form'>
+    <view class='form-item'>
+      <view class='form-item-label'>姓名</view>
+      <view class='form-item-text'>
+        <input placeholder='请输入您的真实姓名' placeholder-style='font-size: 30rpx;color:#a9a9a9;' value='{{jibenForm.userName}}' name="userName" bindblur="username"></input>
+      </view>
+    </view>
+    <view class='form-item'>
+      <view class='form-item-label'>性别</view>
+      <view class='form-item-text'>
+        <picker bindchange="userGender" range="{{arraysex}}" disabled='{{disabled}}'>
+          <view class="picker" style='{{jibenForm.userGender?"":"color:#a9a9a9;"}}'>
+            {{jibenForm.userGender||"请选择"}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class='form-item' bindtap='{{user!=null?"disabledMsg":""}}'>
+      <view class='form-item-label'>学校</view>
+      <view class='form-item-text'>
+        <picker name="schoolIndex" disabled='{{user!=null}}' bindchange="schoolChange" class="school" value="{{schoolIndex}}" range="{{options.schools}}" range-key="schoolValue">
+          <view style='{{jibenShow.schoolValue||options.schools[jibenForm.schoolId-1].schoolValue?"":"color:#a9a9a9;"}}'>
+            {{jibenShow.schoolValue||"请选择"}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class='form-item'>
+      <view class='form-item-label'>QQ</view>
+      <view class='form-item-text'>
+        <input placeholder='请输入您的QQ' placeholder-style='font-size: 30rpx;color:#a9a9a9;' name="userQq" value='{{jibenForm.userQq}}' bindblur="userQq" />
+      </view>
+    </view>
+    <view class='form-item'>
+      <view class='form-item-label'>邮箱</view>
+      <view class='form-item-text'>
+        <input placeholder='请输入您的邮箱' placeholder-style='font-size: 30rpx;color:#a9a9a9;' name="userTel" value='{{jibenForm.userEmail}}' bindblur="userEmail" />
+      </view>
+    </view>
+    <view class='form-item'>
+      <view class='form-item-label'>联系方式</view>
+      <view class='form-item-text tel-text'>
+        <input placeholder='请输入您的联系方式' placeholder-style='font-size: 30rpx;color:#a9a9a9;' name="userTel" value='{{jibenForm.userTel}}' bindinput="userTel" />
+      </view>
+      <view class='code-btn' hover-class='navigator-hover' bindtap="getCode">{{delay>0?delay+'s':codeBtnText}}</view>
+    </view>
+    <view class='form-item'>
+      <view class='form-item-label' hidden='{{codeInputHidden}}'>验证码</view>
+      <view class='form-item-text' hidden='{{codeInputHidden}}'>
+        <input placeholder='请输入验证码' placeholder-style='font-size: 30rpx;color:#a9a9a9;' name="verificationCode" value='{{jibenForm.verificationCode}}' bindblur="verificationCode" />
+      </view>
+    </view>
+
+  </view>
+  <view class='kongbai'></view>
+  <button hover-class='navigator-hover' class='btn' bindtap='submit'>{{user==null?'下一步':'保存'}}</button>
+
+</view>

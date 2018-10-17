@@ -1,0 +1,123 @@
+@import "../../templates/companyitem.wxss";
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  font-family: "YouYuan";
+}
+/***************查找条件************************/
+.search{
+  position: absolute;
+  top: 80rpx;
+   z-index: 10;
+  width: 710rpx;
+  min-height: 300rpx;
+  border-radius: 15rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #fbf7f2;
+}
+/***************tab效果************************/
+.search-tab{
+  width: 610rpx;
+  height: 180rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+.search-tab-item{
+  width: 180rpx;
+  height: 60rpx;
+  margin-top: 20rpx;
+  border-radius: 5rpx;
+  border:1rpx solid #eeeeee;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: black;
+  background-color: white;
+}
+
+.search-tab-item-selected{
+  color: white;
+  background-color: #ee6b41;
+  border:0;
+}
+/***************选项效果***********************/
+.search-content{
+  width: 670rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+.search-content-item{
+  min-width: 210rpx;
+  height: 60rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  border:1rpx solid #eeeeee;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 20rpx;
+  color: black;
+  background-color: white;
+}
+.search-content-item-select{
+  margin-left: 5rpx;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  border:1rpx solid #eeeeee;
+  box-sizing: border-box;
+}
+.search-content-item-selected{
+  border:0;
+  background-image: url("https://lezaixy.com/images/weixin/icon/selected.png?1");
+  background-size: 100% 100%;
+}
+
+.search-content-item-text{
+  min-width: 175rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+/***************选项效果***********************/
+
+.search-have-item{
+  min-width: 210rpx;
+  height: 60rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  border:1rpx solid #eeeeee;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 20rpx;
+  color: white;
+  background-color: #ee6b41;
+  background-image: url("https://lezaixy.com/images/weixin/icon/selected-btn.png");
+  background-size: 100% 100%;
+}
+
+/****************列表**************/
+
+
+.kongbai {
+  width: 100%;
+  height: 100rpx;
+}

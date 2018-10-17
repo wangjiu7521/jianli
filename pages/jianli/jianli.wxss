@@ -1,0 +1,304 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  font-family: "幼圆";
+}
+
+.item{
+  width: 650rpx;
+  margin-top: 50rpx;
+}
+.item-lable{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  border-radius: 15rpx;
+}
+.item-lable-text{
+  width: 500rpx;
+  margin-left: 60rpx;
+  font-size: 30rpx;
+}
+
+.item-detail-icon{
+  width: 55rpx;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.item-detail-icon image{
+  margin-top: 20rpx;
+  width: 55rpx;
+  height: 55rpx;
+}
+.item-detail{
+  width: 100%;
+  margin-top: 10rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  border-radius: 15rpx;
+}
+
+/* 基本信息 */
+.head-icon{
+  width: 130rpx;
+  height: 130rpx;
+  background-color: #fccc6e;
+  margin-left: 40rpx;
+  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.head-icon image{
+  width: 130rpx;
+  height: 130rpx;
+  background-color: #fccc6e;
+}
+
+.jiben-detail{
+  height: 200rpx;
+}
+.jiben-detail-content{
+  width: 390rpx;
+  height: 150rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.jiben-detail-content-item{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.jiben-item-lable{
+  width: 150rpx;
+  height: 100%;
+  font-size: 30rpx;
+  margin-left: 25rpx;
+}
+.jiben-item-text{
+  height: 100%;
+  font-size: 30rpx;
+}
+
+/* 学校信息 */
+.school-detail{
+  height: 350rpx;
+}
+.school-detail-content{
+  margin-left: 60rpx;
+  width: 500rpx;
+  height: 300rpx;
+}
+.school-detail-content-item{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.school-item-lable{
+  width: 150rpx;
+  height: 100%;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.school-item-text{
+  height: 100%;
+  margin-left: 30rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+/* 特长信息 */
+
+.techang-detail{
+  box-sizing: border-box;
+  padding-top: 7rpx;
+  padding-bottom: 7rpx;
+  justify-content: center;
+}
+.techang-detail-item{
+  margin-top: 7rpx;
+  margin-bottom: 7rpx;
+  width: 535rpx;
+  height: 50rpx;
+  border:1rpx solid #fcaf17;
+  border-radius: 7rpx;
+  color: #fcaf17;
+  font-size: 24rpx;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 荣誉特长 */
+
+.certificate-lable{
+   width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-sizing: border-box;
+
+}
+
+.certificate-lable-text{
+  width: 500rpx;
+  margin-left: 60rpx;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+}
+
+.certificate-detail-content{
+  width: 535rpx;
+  box-sizing: border-box;
+  margin-left: 60rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.certificate-detail-item{
+  box-sizing: border-box;
+  margin-bottom: 15rpx;
+  width: 265rpx;
+  height: 50rpx;
+  border:1rpx solid #fcaf17;
+  border-radius: 7rpx;
+  color: #fcaf17;
+  font-size: 20rpx;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 就业信息 */
+.work-detail-content{
+  width: 535rpx;
+  box-sizing: border-box;
+  margin-left: 60rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.work-detail-item{
+  box-sizing: border-box;
+  margin-bottom: 15rpx;
+  width: 100%;
+  height: 50rpx;
+  border:1rpx solid #fcaf17;
+  border-radius: 7rpx;
+  color: #fcaf17;
+  font-size: 24rpx;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* 自我介绍 */
+
+.intro-detail{
+  height: 200rpx;
+}
+.intro-lable-text{
+  width: 135rpx;
+}
+.intro-lable-text-small{
+  margin-top: 8rpx;
+  color: #cfcfcf;
+  font-size: 20rpx;
+}
+.intro-detail-content{
+   width: 490rpx;
+   height: 170rpx;
+  box-sizing: border-box;
+  margin-left: 60rpx;
+  margin-right: 10rpx;
+  border: 1rpx solid  #fcaf17;
+  border-radius: 10rpx;
+  background-color: white;
+
+}
+.intro-text{
+  color: #fcaf17;
+  font-size: 24rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:5;
+}
+
+/* 入驻 */
+.xieyi{
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.xieyi-check{
+  width: 25rpx;
+  height: 25rpx;
+  border-radius: 5rpx;
+  border: 1rpx solid  #fcaf17; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.xieyi-checked{
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50rpx;
+  background-color: #fcaf17; 
+}
+.xieyi-text{
+  margin-left: 5rpx;
+  color: #fcaf17;
+  border-bottom: 1rpx solid  #fcaf17; 
+}
+
+.btn{
+  width: 650rpx;
+  height: 70rpx;
+  color: white;
+  font-size: 14px;
+  background-color: #fcaf17;
+  border-radius: 5rpx;
+  margin-bottom: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.kongbai{
+  width: 100%;
+  height: 50rpx;
+}

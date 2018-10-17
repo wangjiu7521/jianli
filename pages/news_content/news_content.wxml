@@ -1,0 +1,17 @@
+<scroll-view scroll-y class='center' style="width:100%;height:100%">
+<view class='center'>
+  <view class='main'>
+    <view class='news_title center' ><text>{{data.newsTitle}}</text></view>
+    <view class='news_info'>
+      <text space='ensp'>作 者：{{data.newsAuthor}} {{data.newsTime}}</text>
+      <image class='rt' src='https://lezaixy.com/images/weixin/icon/eye.png'></image>
+      <text class='rt'>浏览量：{{newsPageview==null?data.newsPageview:newsPageview}}</text>
+    </view>
+    
+    <view class='news_content'>
+      <import src="../../wxParse/wxParse.wxml"/>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+  </view>
+  </view>
+</scroll-view>

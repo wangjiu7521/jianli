@@ -1,0 +1,32 @@
+page {
+  line-height: 50rpx;
+  letter-spacing: 4rpx;
+  color: #353535;
+}
+
+.container {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20px;
+}
+
+.header {
+  font-size: 40rpx;
+  font-family: MicroSoft Yahei;
+  color:#fcaf17;
+}
+
+.hea {
+  text-align: center;
+}
+
+.body {
+  font-size: 35rpx;
+  font-family: MicroSoft Yahei;
+  letter-spacing: 2rpx;
+  line-height: 80rpx;
+}
+
+.container>text {
+  border-bottom: 1px solid #aaaaaa;
+}

@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="qiandao">
+    <image src='https://lezaixy.com/images/weixin/bgimg/qiandao.png' mode='aspectFit'></image>
+  </view>
+</view>

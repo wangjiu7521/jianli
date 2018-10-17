@@ -1,0 +1,12 @@
+<view class='ding'>
+<view class='header'>
+  <view class='header-title'>自我介绍</view>
+  <text class='header-contain'>请填写您的自我介绍，有助于别人了解你</text>
+</view>
+<view class='text'>
+  <textarea bindinput='introduction' name='introduction' auto-height='true' placeholder="用一两句简单的语言来描述一下自己。" value='{{jobhunterForm.userIntroduction||outworkerForm.skillIntroduction}}' placeholder-style='font-weight: 300;font-size: 30rpx;margin-top:10rpx;margin-left:10rpx;' />
+</view>
+</view>
+<view class='submitBtn'>
+    <button hover-class='navigator-hover' class='btn' bindtap='submit'>保存</button>
+</view>

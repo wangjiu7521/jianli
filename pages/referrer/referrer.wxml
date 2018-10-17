@@ -1,0 +1,17 @@
+<view class='ding'>
+<view class='header'>
+  <view class='header-title'>我的伯乐</view>
+  <text class='header-contain'>请勾选您的推荐人，只能选一个，如果没有，可不选，推荐人一经注册，不可更改。</text>
+</view>
+<view class='item'>
+  <checkbox-group name="referrerId" bindchange="referrerChange">
+    <label class="checkbox row" wx:for="{{options.referrers}}" wx:key="{{item.referrerId}}" wx:for-item="item">
+      <text class='row-title'> {{item.referrerValue}}</text>
+      <checkbox class='checkbox' value="{{item.referrerId}}" checked='{{item.checked}}' />
+    </label>
+  </checkbox-group>
+</view>
+</view>
+<view class='submitBtn'>
+    <button hover-class='navigator-hover' class='btn' bindtap='submit'>保存</button>
+</view>

@@ -1,0 +1,50 @@
+page {
+  font-family: SimHei;
+  font-size: 30rpx;
+  color: #020202;
+}
+
+.bian2 {
+  border: 2px solid #e2e2e2;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #d2d2d2;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  min-height: 100rpx;
+  background-color: #fbfbfb;
+  color: #353535;
+}
+
+
+.bianji2 {
+  display: inline-block;
+  width: 75rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 50rpx;
+  margin-top: 10rpx;
+}
+
+.head {
+  font-family: SimHei;
+  font-size: 35rpx;
+  color: #888;
+  display: inline-block;
+  margin-top: 25rpx;
+  margin-left: 15rpx;
+}
+
+
+.in {
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+  margin-bottom: 10rpx;
+}
+
+.in-text {
+ /* border-bottom: 1px solid #d2d2d2;*/
+  margin-top: 30rpx;
+  margin-bottom: 10rpx;
+  font-size: 37rpx;
+}

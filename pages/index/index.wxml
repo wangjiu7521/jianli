@@ -1,0 +1,64 @@
+<import src="../../templates/newsitem.wxml"/>
+
+<view class="container-index">
+ <view class='swiper'>
+  <swiper class='swiper-img' indicator-dots='true' duration='500' interval='5000' autoplay='true' circular='true'>
+        <swiper-item wx:for="{{swiperImgs}}" wx:key="{{index}}"><image style='width:100%;height:100%' mode="aspectFill" src='{{item}}'></image></swiper-item>
+  </swiper>
+</view>
+  <view class='kapiancaidan'>
+  <navigator class='caidan-btn' url='/pages/company_list/company_list'>
+    <image class='icon' src='https://lezaixy.com/images/weixin/icon/qiye.png'></image>
+    <text class='icon-text'>合作企业</text>
+  </navigator>
+  <!-- <view class='caidan-btn' hover-class='btn-hover'  bindtap='voidfun'>
+    <image class='icon' src='https://lezaixy.com/images/weixin/icon/qiye.png'></image>
+    <text class='icon-text'>合作企业</text>
+  </view> -->
+  <navigator class='caidan-btn' url='/pages/news_list/news_list'>
+    <image class='icon' src='https://lezaixy.com/images/weixin/icon/kandian.png'></image>
+    <text class='icon-text'>每日看点</text>
+  </navigator>
+  <view class='caidan-btn' hover-class='btn-hover'  bindtap='voidfun'>
+    <image class='icon' src='https://lezaixy.com/images/weixin/icon/tuiwen.png'></image>
+    <text class='icon-text'>精选推文</text>
+  </view>
+  <navigator class='caidan-btn' url='/pages/circle/circle'>
+    <image class='icon' src='https://lezaixy.com/images/weixin/icon/ceping.png'></image>
+    <text class='icon-text'>就业测评</text>
+  </navigator>
+  </view>
+
+  <navigator class='more' url='/pages/company_list/company_list'>
+    <text class='more-title'>合作企业</text>
+    <view class='more-text'>
+      <text class='more-text-word'>更多</text>
+    <image class='more-text-icon' src="https://lezaixy.com/images/weixin/icon/right.png"></image>
+    </view>
+  </navigator>
+<scroll-view class='company-scroll' scroll-x="{{true}}"  >
+  <view class='company-block' wx:for="{{companys}}" wx:key="{{index}}">
+    <navigator  class='company' url='/pages/company_detail/company_detail?companyID={{item.companyId}}'>
+      <view class='company-logo'>
+      <image src='{{"https://lezaixy.com"+item.companyLogo}}' mode="aspectFill"></image>
+      </view>
+      <view class='company-content'>
+        <text class='company-name text-overflow'>{{item.companyName}}</text>
+      </view>
+      </navigator>
+    </view>
+</scroll-view>
+  <navigator class='more' url='/pages/news_list/news_list'>
+    <text class='more-title'>每日看点</text>
+    <view class='more-text'>
+      <text class='more-text-word'>更多</text>
+    <image class='more-text-icon' src="https://lezaixy.com/images/weixin/icon/right.png"></image>
+    </view>
+  </navigator>
+
+  <block wx:for="{{news}}" wx:key="{{index}}">
+     <template is="newsitem" data="{{item}}"/>
+  </block>
+  <official-account></official-account>
+  <view class='kongbai'></view>
+</view>

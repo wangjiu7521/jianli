@@ -1,0 +1,23 @@
+<view class='ding'>
+<view class='header'>
+  <view class='header-title'>证书</view>
+  <text class='header-contain'>请勾选您的证书，最多可选三个。</text>
+</view>
+<view class='item'>
+  <checkbox-group name="certificateId" bindchange="certificateChange">
+    <label class="checkbox" wx:for="{{options.certificates}}" wx:key="{{item.certificateId}}" wx:for-item="item">
+      <view class='row' wx:if="{{item.certificateId!=1}}">
+      <text class='row-title'> {{item.certificateValue}}</text>
+        <checkbox class='checkbox' value="{{item.certificateId}}" checked='{{item.checked}}' />
+      </view>
+    </label>
+    <view class='checkbox row'>
+     <text class='row-title'>{{options.certificates[0].certificateValue}}</text>
+      <checkbox class='checkbox' value="{{options.certificates[0].certificateId}}" checked='{{options.certificates[0].checked}}'/>
+    </view>
+  </checkbox-group>
+</view>
+</view>
+<view class='submitBtn'>
+    <button hover-class='navigator-hover' class='btn' bindtap='submit'>保存</button>
+</view>

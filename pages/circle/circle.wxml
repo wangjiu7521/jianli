@@ -1,0 +1,134 @@
+<view class='ruzhu' wx:if="{{jobhunter==null}}">
+  <view class='ruzhu_title'>入驻人才数据库</view>
+  <view class='ruzhu_content'>欢迎来到乐在人才兼职平台，由于您还未入驻人才数据库，因此您还不能使用圈子里的社交功能，您可以通过入驻我们的人才数据库获得更好的体验，赶快去入驻吧！</view>
+  <view class='ruzhu_btn button' hover-class='navigator-hover' bindtap='ruzhu'>入  驻</view>
+</view>
+<block wx:else>
+<view class='container-circle'>
+  <view class='pingfen'>
+    <view class='pingfen-num'>
+      <view class='pingfen-num-text pingfen-num-text-bgimg'>{{score||"暂无"}}</view>
+    </view>
+    <view class='fenxiang' >
+    <button class='fenxiang-btn' data-name="shareBtn" plain open-type="share">
+      <image class='fenxiang-icon' src="https://lezaixy.com/images/weixin/icon/fenxiang.png"></image>
+    </button>
+    </view> 
+  </view>
+
+  <view class='pingjia'>
+  <text class='pingjia-text'>综合就业评分：{{comment[commentIndex]}}</text>
+  </view>
+
+  <view class='item color1'>
+    <view class='item-icon'>
+      <image class='item-icon-per' src="https://lezaixy.com/images/weixin/icon/per.png"></image>
+    </view>
+    <text class='item-text' decode='{{true}}'>入驻序号:&ensp;&ensp;{{userNumber||"暂无"}}</text>
+  </view>
+  <view class='item color2'>
+    <view class='item-icon'>
+      <image class='item-icon-per' src="https://lezaixy.com/images/weixin/icon/per.png"></image>
+    </view>
+    <text class='item-text' decode='{{true}}'>领先人数:&ensp;&ensp;{{leadNumber||"暂无"}}</text>
+  </view>
+
+  <view class='item color3'>
+    <view class='item-icon'>
+      <image class='item-icon-per' src="https://lezaixy.com/images/weixin/icon/per.png"></image>
+    </view>
+    <text class='item-text' decode='{{true}}'>相同爱好人数:&ensp;&ensp;{{personalData.sameSpecialtysCount||"0"}}</text>
+  </view>
+
+  <view class='item color3'>
+    <view class='item-icon'>
+      <image class='item-icon-zhi' src="https://lezaixy.com/images/weixin/icon/zhi.png"></image>
+    </view>
+    <text class='item-text' decode='{{true}}'>竞争指数（爱好）:&ensp;&ensp;{{specialtyPercent||"0"}}%</text>
+  </view>
+ 
+  <view class='item color1'>
+    <view class='item-icon'>
+      <image class='item-icon-per' src="https://lezaixy.com/images/weixin/icon/per.png"></image>
+    </view>
+    <text class='item-text' decode='{{true}}'>相同专业人数:&ensp;&ensp;{{personalData.sameSpecialsCount||"0"}}</text>
+  </view>
+  <view class='item color1'>
+    <view class='item-icon'>
+      <image class='item-icon-zhi' src="https://lezaixy.com/images/weixin/icon/zhi.png"></image>
+    </view>
+    <text class='item-text' decode='{{true}}'>竞争指数（专业）:&ensp;&ensp;{{specialPercent||"0"}}%</text>
+  </view>
+
+  <view class='item color2'>
+    <view class='item-icon'>
+      <image class='item-icon-per' src="https://lezaixy.com/images/weixin/icon/per.png"></image>
+    </view>
+    <text class='item-text' decode='{{true}}'>相同意向岗位人数:&ensp;&ensp;{{personalData.sameIntentionjobCount||"0"}}</text>
+  </view>
+  <view class='item color2'>
+    <view class='item-icon'>
+      <image class='item-icon-zhi' src="https://lezaixy.com/images/weixin/icon/zhi.png"></image>
+    </view>
+    <text class='item-text' decode='{{true}}'>竞争指数（意向岗位）:&ensp;&ensp;{{intentionjobPercent||"0"}}%</text>
+  </view>
+
+  <view class='item color3'>
+    <view class='item-icon'>
+      <image class='item-icon-per' src="https://lezaixy.com/images/weixin/icon/per.png"></image>
+    </view>
+    <text class='item-text' decode='{{true}}'>相同籍贯人数:&ensp;&ensp;{{personalData.sameUserNativeplaceCount||"0"}}</text>
+  </view>
+  <view class='item color3'>
+    <view class='item-icon'>
+      <image class='item-icon-zhi' src="https://lezaixy.com/images/weixin/icon/zhi.png"></image>
+    </view>
+    <text class='item-text' decode='{{true}}'>竞争指数（籍贯）:&ensp;&ensp;{{userNativeplacePercent||"0"}}%</text>
+  </view>
+
+  <view class='item color4'>
+    <view class='item-icon'>
+      <image class='item-icon-per' src="https://lezaixy.com/images/weixin/icon/per.png"></image>
+    </view>
+    <text class='item-text' decode='{{true}}'>相同学校人数:&ensp;&ensp;{{personalData.sameSchoolCount||"0"}}</text>
+  </view>
+  <view class='item color4'>
+    <view class='item-icon'>
+      <image class='item-icon-zhi' src="https://lezaixy.com/images/weixin/icon/zhi.png"></image>
+    </view>
+    <text class='item-text' decode='{{true}}'>竞争指数（学校）:&ensp;&ensp;{{schoolPercent||"0"}}%</text>
+  </view>
+
+  <view class='item color1'>
+    <view class='item-icon'>
+      <image class='item-icon-per' src="https://lezaixy.com/images/weixin/icon/per.png"></image>
+    </view>
+    <text class='item-text' decode='{{true}}'>相同荣誉人数:&ensp;&ensp;{{personalData.sameHonorCount||"0"}}</text>
+  </view>
+  <view class='item color1'>
+    <view class='item-icon'>
+      <image class='item-icon-zhi' src="https://lezaixy.com/images/weixin/icon/zhi.png"></image>
+    </view>
+    <text class='item-text' decode='{{true}}'>竞争指数（荣誉）:&ensp;&ensp;{{honorPercent||"0"}}%</text>
+  </view>
+
+  <view class='item color2'>
+    <view class='item-icon'>
+      <image class='item-icon-per' src="https://lezaixy.com/images/weixin/icon/per.png"></image>
+    </view>
+    <text class='item-text' decode='{{true}}'>相同证书人数:&ensp;&ensp;{{personalData.sameCertificateCount||"0"}}</text>
+  </view>
+  <view class='item color2'>
+    <view class='item-icon'>
+      <image class='item-icon-zhi' src="https://lezaixy.com/images/weixin/icon/zhi.png"></image>
+    </view>
+    <text class='item-text' decode='{{true}}'>竞争指数（证书）:&ensp;&ensp;{{certificatePercent||"0"}}%</text>
+  </view>
+  <view class='item color3  last-item'>
+    <view class='item-icon'>
+      <image class='item-icon-per' src="https://lezaixy.com/images/weixin/icon/per.png"></image>
+    </view>
+    <text class='item-text-last'>由于入驻人数会不断增加，您的竞争指数随时会发生变动，请及时关注。</text>
+  </view>
+</view>
+</block>

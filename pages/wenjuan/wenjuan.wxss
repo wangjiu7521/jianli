@@ -1,0 +1,104 @@
+
+.container{
+  width: 100%;
+  max-height: 85%;
+  font-family: "幼圆";
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.head-notice{
+  width: 650rpx;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+.head-notice text{
+  margin-left: 35rpx;
+  color:#8c8c8c;
+  font-size: 24rpx;
+  line-height: 35rpx;
+}
+.item{
+  margin-top: 30rpx;
+  width: 650rpx;
+  height: 80rpx;
+  border-radius: 15rpx;
+  background-color: #faf9f9;
+  display: flex;
+  flex-wrap: wrap;
+  align-items:  center;
+}
+.item-textarea{
+  height: 270rpx;
+}
+.item-lable{
+  font-size: 30rpx;
+  margin-left: 35rpx;
+}
+.item-text{
+  font-size: 30rpx;
+  width: 420rpx;
+  margin-left: 25rpx;
+  color:#fcaf17;
+}
+.item-input{
+  font-size: 30rpx;
+  width: 470rpx;
+  height: 60rpx;
+  background-color: white;
+  margin-left: 10rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.item-input-textarea{
+  width: 575rpx;
+  height: 170rpx;
+  margin-left: 35rpx;
+  margin-bottom: 25rpx;
+  background-color: white;
+  border-radius: 5rpx;
+  border: 1rpx solid #959595;
+}
+.item-input-textarea textarea{
+  display: block;
+  width: 100%;
+  height: 100%;
+  color:#fcaf17;font-size: 20rpx;line-height:35rpx;
+}
+.item-input input{
+  width: 440rpx;
+  height: 100%;
+  color:#fcaf17;
+  font-size: 20rpx;
+}
+.item-right-icon{
+  width: 17rpx;
+  height: 28rpx;
+}
+
+.submitBtn{
+  position: fixed;
+  box-sizing: border-box;
+  bottom: 0;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+.btn{
+  width: 650rpx;
+  height: 70rpx;
+  color: white;
+  font-size: 14px;
+  background-color: #fcaf17;
+  border-radius: 5rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

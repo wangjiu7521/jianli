@@ -1,0 +1,120 @@
+<view class='bian1'>
+  <view>
+    <view class='head'>基本信息</view>
+    <view class='person'>
+      <image class='per' src='{{jianli.userPhotoUrl}}'> </image>
+    </view> 
+
+  </view>
+  <view class='bianyi-text'>
+    <view class='row'>
+      
+    </view>
+    <view class='name'>姓名：{{jianli.userName}}</view>
+      <view class='sex'>性别：{{jianli.userGender}}</view>
+    <view class='tel'>联系方式：{{jianli.userTel}}</view>
+
+  </view>
+  <image bindtap='jiben' class='bianji' src='/images/a.png'></image>
+</view>
+<view class='bian2'>
+  <view class='head'>学校信息</view>
+  <image bindtap='schoolChange' class='bianji2' src='/images/a.png'></image>
+ <view class='time'>
+    <text class='text'> 我的学号 ：</text>
+    <text class='study-text'>{{jianli.userSno||""}}</text>
+  </view>
+    <view class='time'>
+    <text class='text'> 毕业院校 ：</text>
+    <text class='study-text'>{{jianli.schoolValue}}</text>
+  </view>
+  <view class='time time1'>
+    <text class='text'> 毕业时间 ：</text>
+    <text class='study-text'>{{jianli.userGraduatetime}}</text>
+  </view>
+  <view class='time'>
+    <text class='text'> 专业分类 ：</text>
+    <text class='study-text'>{{jianli.specialValue}}</text>
+  </view>
+  <view class='time'>
+    <text class='text'> 所学专业 ：</text>
+    <text class='study-text'>{{jianli.specialdetailed}}</text>
+  </view>
+  <view class='time'>
+    <text class='text'> 学历 ：</text>
+    <text class='study-text'>{{jianli.educationValue}}</text>
+  </view>
+    <view class='time'>
+    <text class='text'> 工作经验 ：</text>
+    <text class='study-text'>{{jianli.experienceValue}}</text>
+  </view>
+</view>
+<view class='bian2'>
+  <view class='head'>意向城市</view>
+  <image bindtap='intention' class='bianji2' src='/images/a.png'></image>
+  
+    <view class='in'><text class='in-text'>{{jianli.intentioncitys[0]}}</text></view>
+    <view class='in'><text class='in-text'>{{jianli.intentioncitys[1]}}</text></view>
+    <view class='in'><text class='in-text'>{{jianli.intentioncitys[2]}}</text></view>
+
+</view>
+<view class='bian2'>
+  <view class='head'>意向岗位</view>
+  <image bindtap='intentionjobs' class='bianji2' src='/images/a.png'></image>
+  <view class='in'><text class='in-text'>{{jianli.intentionjobValues[0]}}</text></view>
+    <view class='in'><text class='in-text'>{{jianli.intentionjobValues[1]}}</text></view>
+    <view class='in'><text class='in-text'>{{jianli.intentionjobValues[2]}}</text></view>
+</view>
+<view class='bian2'>
+  <view class='head'>特长</view>
+  <image bindtap='specialtyId' class='bianji2' src='/images/a.png'></image>
+   <view class='in'><text class='in-text'>{{jianli.specialtyValues[0]}}</text></view>
+
+
+    <view class='in'><text class='in-text'>{{jianli.specialtyValues[1]}}</text></view>
+
+
+    <view class='in'><text class='in-text'>{{jianli.specialtyValues[2]}}</text></view>
+</view>
+<view class='bian2'>
+  <view class='head'>证书</view>
+  <image bindtap='certificate' class='bianji2' src='/images/a.png'></image>
+   <view class='in'><text class='in-text'>{{jianli.certificateValues[0]}}</text></view>
+
+
+    <view class='in'><text class='in-text'>{{jianli.certificateValues[1]}}</text></view>
+
+
+    <view class='in'><text class='in-text'>{{jianli.certificateValues[2]}}</text></view>
+</view>
+<view class='bian2'>
+  <view class='head'>荣誉</view>
+  <image bindtap='honorId' class='bianji2' src='/images/a.png'></image>
+   <view class='in'><text class='in-text'>{{jianli.honorValues[0]}}</text></view>
+    <view class='in'><text class='in-text'>{{jianli.honorValues[1]}}</text></view>
+    <view class='in'><text class='in-text'>{{jianli.honorValues[2]}}</text></view>
+</view>
+<view class='bian2'>
+  <view class='head'>我的伯乐</view>
+  <image bindtap='referrer' class='bianji2' src='/images/a.png'></image>
+   <view class='in'><text class='in-text'>{{jianli.referrerValue}}</text></view>
+</view>
+<view class='bian3'>
+  <view class='head intro'>自我介绍</view>
+  <image bindtap='intro' class='bianji2' src='/images/a.png'></image>
+  <view class='in'>
+  <text class='intro-text'>{{jianli.userIntroduction}}</text>
+  </view>
+</view>
+<view class='xieyi'hidden="{{gou}}">
+  <checkbox-group bindchange="checkboxChange6">
+    <label class="checkbox2" wx:for="{{items5}}" wx:key="key" wx:for-item="item">
+      <checkbox class='checkbox2' name='xv' value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+
+    </label>
+  </checkbox-group>
+  <view class='span' bindtap='onTap1' >
+    信息数据提交须知
+  </view>
+</view>
+<button bindtap='submit' hidden="{{an}}">提交</button> 

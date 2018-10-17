@@ -1,0 +1,41 @@
+<!-- <view class="loadmore loading" wx:if="{{ jobhunter==null }}">正在加载...</view> -->
+<view class="container">
+
+<view class='item'>
+  <view class='item-lable'>
+    <text class='item-lable-text'>特长信息</text>
+    <navigator class='item-detail-icon' url='/pages/specialty/specialty'>
+      <image src='https://lezaixy.com/images/weixin/icon/edit.png'></image>
+    </navigator>
+  </view>
+  <view class='item-detail techang-detail'>
+    <block wx:for="{{outworkerShow.specialtyValues}}" wx:key='{{index}}'>
+    <view class='techang-detail-item'><text>{{item}}</text></view>
+    </block>
+  </view>
+</view>
+
+<view class='item'>
+  <view class='item-lable'>
+        <text class='item-lable-text'>自我介绍</text>
+        <navigator class='item-detail-icon' url='/pages/intro/intro?page=outworker'>
+          <image src='https://lezaixy.com/images/weixin/icon/edit.png'></image>
+        </navigator>
+  </view>
+  <view class='item-detail intro-detail'>
+    <view class='intro-detail-content'>
+      <text class='intro-text' decode="{{true}}">&ensp;&ensp;&ensp;&ensp;{{outworkerShow.skillIntroduction||"用一两句见简单的语言来描述一下自己。"}}</text>
+    </view>
+  </view>
+</view>
+
+
+  <view class='kongbai'></view>
+  <button  wx:if="{{outworker == null}}" hover-class='navigator-hover' class='btn' bindtap='submit'>确认</button>
+
+</view>
+
+
+
+
+

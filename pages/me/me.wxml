@@ -1,0 +1,103 @@
+<import src="../../templates/companyitem.wxml"/>
+
+<view class="container-index">
+
+ <view class='head head-bgimg'>
+    <view class='head-guize'>
+      <image class='head-guize-icon' src='https://lezaixy.com/images/weixin/icon/guize.png'></image>
+      <navigator class='head-guize-text' url='/pages/guize/guize'>积分规则</navigator>
+    </view>
+    <view class='head-usericon'><image src='{{userPhotoUrl}}'></image></view>
+    <view class='head-kongbai'></view>
+    <view class='head-huangguan'><image src='https://lezaixy.com/images/weixin/icon/huangguan.png'></image></view>
+    <view class='head-vip'>
+      <image class='head-vip-icon' src='https://lezaixy.com/images/weixin/icon/vip.png'></image>
+      <text class='head-vip-text'>{{level[levelIndex]}}</text>
+    </view>
+    <view class='head-block1'>
+       <view class='head-block-half'>
+        <text class='head-block1-left-text'>ID:{{userCustom.userNum||"暂未生成"}}</text>
+      </view>
+      <view class='head-block-half'>
+          <text class='head-block1-right-text'>积分：</text><text class='head-block1-right-num'>{{userscore.score||'0'}}</text>
+      </view>
+    </view>
+     <view class='head-block2'>
+        <view class='head-block-half'>
+        <text class='head-block2-left-text'>等级:</text><text class='head-block2-left-num'>Lv{{levelIndex}}</text>
+        <view class='progress'><view class='levelProgress' style='width:{{levelProgress}}%;'></view>
+        </view>
+      </view>
+      <view class='head-block-half'>
+          <text class='head-block2-right-text'>审核：{{checkstateValue}}</text>
+      </view>
+    </view>
+</view>
+
+
+  <view class='kapiancaidan'>
+  <navigator class='caidan-btn' url='/pages/jiben/jiben'>
+    <image class='icon' src='https://lezaixy.com/images/weixin/icon/jianzhi.png'></image>
+    <text class='icon-text'>基本信息</text>
+  </navigator>
+  <navigator class='caidan-btn' url='/pages/ptjob/ptjob'>
+    <image class='icon' src='https://lezaixy.com/images/weixin/icon/jianli.png'></image>
+    <text class='icon-text'>兼职信息</text>
+  </navigator>
+  <navigator class='caidan-btn' url='/pages/techang/techang'>
+    <image class='icon' src='https://lezaixy.com/images/weixin/icon/zhuangtai.png'></image>
+    <text class='icon-text'>技能信息</text>
+  </navigator>
+  <navigator class='caidan-btn' url='/pages/jianli/jianli'>
+    <image class='icon' src='https://lezaixy.com/images/weixin/icon/tiezi.png'></image>
+    <text class='icon-text'>就业信息</text>
+  </navigator>
+  </view>
+<view class='label-title'><text class='label-text'>消息记录</text></view>
+  <navigator class='more' url='/pages/recruiter_list/recruiter_list'>
+  <view class='more-left'>
+  <image class='more-left-icon' src="https://lezaixy.com/images/weixin/icon/find.png"></image>
+    <text class='more-left-text'>我投递的简历</text>
+  </view>
+    <view class='more-right'>
+      <text class='more-right-text'>{{recruitertotal}}</text>
+      <image class='more-right-icon' src="https://lezaixy.com/images/weixin/icon/right.png"></image>
+    </view>
+  </navigator>
+  <view class="loadmore" wx:if='{{recruiters.length == 0}}'>您还没有投递过简历</view>
+
+  <block wx:for="{{recruiters}}" wx:key="{{index}}">
+    <template is="companyitem" data="{{item}}"/>
+  </block>
+
+
+ <navigator class='more' url='/pages/message/message'>
+  <view class='more-left'>
+  <image class='more-left-icon' src="https://lezaixy.com/images/weixin/icon/find.png"></image>
+    <text class='more-left-text'>消息通知</text>
+  </view>
+    <view class='more-right'>
+      <text class='more-right-text'>{{messagetotal}}</text>
+      <image class='more-right-icon' src="https://lezaixy.com/images/weixin/icon/right.png"></image>
+    </view>
+  </navigator>
+
+  <view class='kongbai'></view>
+
+<block wx:for='{{messages}}' wx:key='{{index}}'>
+
+  <view class='message'>
+    <view class='message-title'  id='{{index}}' bindtap='choose'>
+      <text class='message-title-text'>{{messagetypes[item.messageType-1].typeValue}}：{{item.messageTitle}}</text>
+      <text class='message-title-time'>{{item.messageTime}}</text>
+      <image class='message-detail-icon' src='https://lezaixy.com/images/weixin/icon/{{detail[index]==false?"down":"up"}}.png'></image>
+    </view>
+     <view class='message-content' hidden='{{!detail[index]}}'>
+      <text class='message-content-text'>{{item.messageContext}}</text>
+    </view>
+  </view>
+
+  </block>
+  <view class="loadmore" wx:if='{{messages.length == 0}}'>暂无您的消息</view>
+  <view class='bottom'></view>
+</view>

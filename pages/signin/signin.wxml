@@ -1,0 +1,49 @@
+<form bindsubmit='submitForm'>
+<scroll-view scroll-y class='content'>
+<view class='content-main'>
+    
+      <view class='item' bindtap='choose' id="job">
+      <view class='item_title'>意向兼职</view><text class='{{parttimerForm.intentionparttimeIds.length!=0?"":"item_value"}}'>{{parttimerForm.intentionparttimeIds.length!=0?parttimerForm.intentionparttimeIds.length+"个":"请选择"}}</text>
+      </view>
+      <view class='job-detail detail' hidden='{{job_detail}}'>
+        <block wx:for='{{options.intentionparttimes}}' wx:key="{{intentionparttimeId}}">
+          <view class="job-item detail-item {{item.checked?'check':''}}" id="{{item.intentionparttimeId}}" bindtap='checkjob'>
+            <text>{{item.intentionparttimeValue}}</text>
+          </view>
+        </block>
+      </view>
+      <view class='cuttingline' hidden='{{!job_detail}}'></view>
+
+      <view class='item' bindtap='choose' id='addr'>
+        <view class='item_title'>兼职地点</view><text class='{{parttimerForm.parttimeaddrIds.length!=0?"":"item_value"}}'>{{parttimerForm.parttimeaddrIds.length!=0?parttimerForm.parttimeaddrIds.length+"个":"请选择"}}</text>
+      </view>
+      <view class='addr-detail detail' hidden='{{addr_detail}}'>
+        <block wx:for='{{options.parttimeaddrs}}' wx:key="{{parttimeaddrId}}">
+          <view class="addr-item detail-item {{item.checked?'check':''}}" id="{{item.parttimeaddrId}}" bindtap='checkaddr'>
+            <text>{{item.parttimeaddrValue}}</text>
+          </view>
+        </block>
+      </view>
+      <view class='cuttingline' hidden='{{!addr_detail}}'></view>
+
+       <view class='item' bindtap='choose' id='worktime'>
+       <view class='item_title'>兼职时间</view><text class='{{parttimerForm.worktimeIds.length!=0?"":"item_value"}}'>{{parttimerForm.worktimeIds.length!=0?parttimerForm.worktimeIds.length+"个":"请选择"}}</text>
+      </view> 
+      <view class='worktime-detail detail' hidden='{{worktime_detail}}'>
+        <block wx:for='{{options.worktimes}}' wx:key="{{worktimeId}}">
+          <view class="worktime-item detail-item {{item.checked?'check':''}}" id="{{item.worktimeId}}" bindtap='checkworktime'>
+            <text>{{item.worktimeValue}}</text>
+          </view>
+        </block>
+      </view>
+      <view class='divider'></view>
+    <view class='item'>
+         <view class='item_title'>兼职状态</view>
+         <switch id='jobstate' name='jobstate' bindchange='pickerChange' color='#fcaf17' checked='{{parttimerState}}'></switch>
+      </view>
+</view>
+</scroll-view>
+  <view class='submitBtn'>
+    <button hover-class='navigator-hover' class='btn' form-type='submit'>保存</button>
+  </view>
+</form>

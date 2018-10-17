@@ -1,0 +1,317 @@
+@import "../../templates/companyitem.wxss";
+.container-index{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  font-family: "幼圆";
+}
+.head{
+  margin-top: 42rpx;
+  width: 670rpx;
+  height: 302rpx;
+  border-radius: 15rpx;
+  background-color: #faf9f9;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.head-guize{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.head-guize-icon{
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 10rpx;
+}
+.head-guize-text{
+  font-size: 16rpx;
+  color: #f8c157;
+  border-bottom: 1rpx solid #f8c157;
+  margin-right: 30rpx;
+}
+.head-usericon{
+  position: absolute;
+  margin-top: 60rpx;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  background-color: #ffce7b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head-usericon image{
+  width: 100%;
+  height: 100%;
+}
+.head-kongbai{
+  width: 100%;
+  height: 95rpx;
+}
+.head-huangguan{
+  width: 100%;
+  height: 25rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.head-huangguan image{
+  margin-left: 420rpx;
+  width: 30rpx;
+  height: 23rpx;
+}
+.head-vip{
+  width: 100%;
+  height: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.head-vip-icon{
+  margin-left: 400rpx;
+  width: 60rpx;
+  height: 25rpx;
+  margin-right: 10rpx;
+
+}
+.head-vip-text{
+  font-size: 16rpx;
+  color: #fcb935;
+}
+
+.head-block1{
+  width: 100%;
+  height: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.head-block-half{
+  width: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 100%;
+
+}
+.head-block1-left-text{
+  margin-left: 100rpx;
+  color: #fcaf17;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  height: 24rpx;
+}
+.head-block1-right-text{
+  margin-left: 135rpx;
+  color: #fcaf17;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  height: 24rpx;
+}
+.head-block1-right-num{
+  color: #fcaf17;
+  font-size: 24rpx;
+}
+.head-block2{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.head-block2-left-text{
+  margin-left: 100rpx;
+  color: #fcaf17;
+  font-size: 24rpx;
+}
+.head-block2-left-num{
+  color: #fcaf17;
+  font-size: 24rpx;
+}
+.progress{
+  width: 135rpx;
+  margin-left: 5rpx;
+  border-radius: 5rpx;
+  height: 10rpx;
+  background-color:#d2d2d2;
+}
+.levelProgress{
+  height: 100%;
+  background-color: #ffce7b;
+}
+.head-block2-right-text{
+  margin-left: 135rpx;
+  color: #fcaf17;
+  font-size: 24rpx;
+}
+
+.kapiancaidan{
+  margin-top: 42rpx;
+  width: 670rpx;
+  height: 125rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.caidan-btn{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.icon{
+  width: 80rpx;
+  height: 80rpx;
+
+}
+.icon-text{
+  margin-top: 7rpx;
+  font-size: 20rpx;
+  
+}
+
+.label-title{
+  margin-top: 45rpx;
+  width: 100%;
+  height: 45rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.label-text{
+  color: black;
+  font-size: 17px;
+  margin-left: 60rpx;
+}
+
+/************************横条************************/
+.more{
+  width: 100%;
+  height: 60rpx;
+margin-top: 20rpx;
+  background-color: #efecec;
+  font-size: 34rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between; 
+  align-items: center;
+}
+
+.more-left{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 60rpx;
+}
+.more-left-icon{
+  width: 30rpx;
+  height: 30rpx;
+}
+.more-left-text{
+  margin-left: 5rpx;
+  font-size: 12px;
+}
+
+.more-right{
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: 41rpx;
+}
+.more-right-text{
+    height: 60rpx;
+    line-height:  60rpx;
+    text-align: center;
+    margin-right: 22rpx;
+    font-size: 17px;
+    color: #ef4136;
+}
+.more-right-icon{
+  width: 26rpx;
+  height: 35rpx;
+}
+.kongbai {
+  width: 100%;
+  height: 20rpx;
+}
+
+
+/***************************消息相关*************************/
+.message{
+  width: 670rpx;
+  min-height: 40rpx;
+  margin-bottom: 10rpx;
+  border-radius: 15rpx;
+  background-color: #f7f7f7;
+}
+.message-title{
+  width: 100%;
+  height: 40rpx;
+  background-color: #faf9f9;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; 
+}
+.message-title-text{
+  width: 430rpx;
+  margin-left: 15rpx;
+  font-size: 22rpx;
+  color: #727272;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+}
+.message-title-time{
+  width: 170rpx;
+  font-size: 18rpx;
+  color: #a9a9a9;
+}
+.message-detail-icon{
+  width: 16rpx;
+  height: 10rpx;
+  margin-right: 15rpx;
+}
+.message-content{
+  width: 100%;
+  min-height: 75rpx;
+  margin-bottom: 10rpx;
+  border-radius: 15rpx;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; 
+}
+.message-content-text{
+  color: #727272;
+  font-size: 22rpx;
+  line-height: 50rpx;
+  margin-left: 15rpx;
+  width: -webkit-calc(100% - 30rpx);
+}
+.bottom{
+  width: 100%;
+  height: 40rpx;
+}
+.head-bgimg{
+   background-image: url("https://lezaixy.com/images/weixin/bgimg/me-bgimg.jpg");
+   background-color: #faf9f9;
+   background-size: 100% 100%;
+}

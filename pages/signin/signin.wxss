@@ -1,0 +1,136 @@
+page{
+  height: 100%;
+}
+
+.content{
+  width: 100%;
+  height: -webkit-calc(100% - 70rpx);
+  height: 85%;
+}
+.content-main{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  justify-content: center;
+}
+.item{
+  width:90%;
+  height: 100rpx;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+}
+.item_title{
+  height: 100%;
+  line-height: 100rpx;
+  
+}
+.item_value{
+  color: #a2a2a2;
+  font-weight: 300;
+  font-size: 35rpx;
+}
+.item-input{
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction:row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.item input{
+
+  height: 100%;
+  line-height: 100%;
+  width: 100%;
+}
+
+.detail{
+  box-sizing: border-box;
+  margin-top: -8rpx;
+  width: 100%;
+  background: #fff8ec;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 10rpx;
+  padding-left: 35rpx;
+  padding-right: 35rpx;
+  padding-bottom: 10rpx;
+}
+
+.detail-item{
+  font-size: 24rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #959595;
+  color: #c3c1bd;
+  border-radius: 5rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  background-color: white;
+  height: 65rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.job-item{
+  width: 20%; 
+  margin-left:4%;
+}
+.addr-item{
+  width: 70%; 
+  margin-left:15%;
+}
+.worktime-item{
+  width: 20%; 
+  margin-left:10%;
+}
+.check{
+  color: #fcaf17;
+
+  border: 1rpx solid #fcaf17;
+}
+#name,#contact{
+  text-align: right;
+}
+#jobstate{
+  float: right;
+}
+.picker{
+  width: 100%;
+}
+.picker-text{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.submitBtn{
+  position: fixed;
+  box-sizing: border-box;
+  bottom: 0;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+.btn{
+  width: 650rpx;
+  height: 70rpx;
+  color: white;
+  font-size: 14px;
+  background-color: #fcaf17;
+  border-radius: 5rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+

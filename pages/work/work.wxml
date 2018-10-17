@@ -1,0 +1,21 @@
+
+<view class='bian2'>
+  <view class='head'>意向城市</view>
+  <image bindtap='intention' class='bianji2' src='/images/a.png'></image>
+  
+    <view class='in'><text class='in-text'>{{jianli.intentioncitys[0]}}</text></view>
+
+
+    <view class='in'><text class='in-text'>{{jianli.intentioncitys[1]}}</text></view>
+
+
+    <view class='in'><text class='in-text'>{{jianli.intentioncitys[2]}}</text></view>
+
+</view>
+<view class='bian2'>
+  <view class='head'>意向岗位</view>
+  <image bindtap='intentionjobs' class='bianji2' src='/images/a.png'></image>
+  <view class='in'><text class='in-text'>{{jianli.intentionjobValues[0]}}</text></view>
+    <view class='in'><text class='in-text'>{{jianli.intentionjobValues[1]}}</text></view>
+    <view class='in'><text class='in-text'>{{jianli.intentionjobValues[2]}}</text></view>
+</view>

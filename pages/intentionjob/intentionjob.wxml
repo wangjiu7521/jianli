@@ -1,0 +1,27 @@
+<!--pages/intentionjob/intentionjob.wxml-->
+<view class='ding'>
+<view class='header'>
+  <view class='header-title'>意向岗位</view>
+  <text class='header-contain'>请勾选您的意向岗位，最多可选三个。</text>
+</view>
+<view class='item'>
+  <checkbox-group name="intentionjobId" bindchange='intentionjobChange'>
+
+    <label class="checkbox" wx:for="{{options.intentionjobs}}" wx:key="{{item.intentionjobId}}" wx:for-item="item">
+      <view class='row' wx:if="{{item.intentionjobId!=1}}">
+        <text class='row-title'> {{item.intentionjobValue}}</text>  
+        <checkbox class='checkbox' name='intentionjobId' value="{{item.intentionjobId}}" checked='{{item.checked}}' />
+      </view>
+    </label>
+
+    <view class='checkbox row'>
+     <text class='row-title'> {{options.intentionjobs[0].intentionjobValue}}</text>
+      <checkbox class='checkbox' value="{{options.intentionjobs[0].intentionjobId}}" checked='{{options.intentionjobs[0].checked}}' />
+    </view>
+  </checkbox-group>
+</view>
+</view>
+<view class='submitBtn'>
+    <button hover-class='navigator-hover' class='btn' bindtap='submit'>保存</button>
+</view>
+

@@ -1,0 +1,81 @@
+
+<import src="../../templates/companyitem.wxml"/>
+
+<view class='container'>
+
+  <view class='find'>
+    <view class='find-content'>
+      <view class='find-lable'>投递简历</view>
+      <view class='find-btn' bindtap='openSearch'>{{openSearch?"关闭查找条件":"打开查找条件"}}</view>
+    </view>
+  </view>
+  <view class='search' hidden='{{!openSearch}}'>
+    <view class='search-tab'>
+      <view id='0' class='{{"search-tab-item "+(tabIndex==0?"search-tab-item-selected":"")}}' bindtap='tabSelected'>企业分类</view>
+      <view id='1' class='{{"search-tab-item "+(tabIndex==1?"search-tab-item-selected":"")}}' bindtap='tabSelected'>企业规模</view>
+      <view id='2' class='{{"search-tab-item "+(tabIndex==2?"search-tab-item-selected":"")}}' bindtap='tabSelected'>期望薪资</view>
+      <view id='3' class='{{"search-tab-item "+(tabIndex==3?"search-tab-item-selected":"")}}' bindtap='tabSelected'>招聘岗位</view>
+      <view id='4' class='{{"search-tab-item "+(tabIndex==4?"search-tab-item-selected":"")}}' bindtap='tabSelected'>公司福利</view>
+      <picker id='address' mode="multiSelector" bindchange="regionChange" bindcolumnchange="regionColumnChange" value="{{regionIndex}}" range="{{regionArray}}" range-key='name'>
+        <view id='5' class='{{"search-tab-item "+(tabIndex==5?"search-tab-item-selected":"")}}' bindtap='tabSelected'>公司地址</view>
+      </picker>
+
+    </view>
+    <view class='search-content'>
+      <block wx:for="{{companycategorys}}" wx:key="{{item.categoryId}}">
+        <view hidden='{{tabIndex!=0}}' class='search-content-item' id="{{item.categoryId}}" bindtap='itemSelect'>
+          <view class='{{"search-content-item-select "+(item.selected?"search-content-item-selected":"")}}'></view>
+          <text class='search-content-item-text'>{{item.categoryValue}}</text>
+        </view>
+      </block>
+      <block wx:for="{{companysizes}}" wx:key="{{item.sizeId}}">
+        <view hidden='{{tabIndex!=1}}' class='search-content-item' id="{{item.sizeId}}" bindtap='itemSelect'>
+          <view class='{{"search-content-item-select "+(item.selected?"search-content-item-selected":"")}}'></view>
+          <text class='search-content-item-text'>{{item.sizeValue}}</text>
+        </view>
+      </block>
+      <block wx:for="{{wages}}" wx:key="{{item.wageId}}">
+        <view hidden='{{tabIndex!=2}}' class='search-content-item' id="{{item.wageId}}" bindtap='itemSelect'>
+          <view class='{{"search-content-item-select "+(item.selected?"search-content-item-selected":"")}}'></view>
+          <text class='search-content-item-text'>{{item.wageValue}}</text>
+        </view>
+      </block>
+      <block wx:for="{{intentionjobs}}" wx:key="{{item.intentionjobId}}">
+        <view hidden='{{tabIndex!=3}}' class='search-content-item' id="{{item.intentionjobId}}" bindtap='itemSelect'>
+          <view class='{{"search-content-item-select "+(item.selected?"search-content-item-selected":"")}}'></view>
+          <text class='search-content-item-text'>{{item.intentionjobValue}}</text>
+        </view>
+      </block>
+      <block wx:for="{{welfares}}" wx:key="{{item.welfareId}}">
+        <view hidden='{{tabIndex!=4}}' class='search-content-item' id="{{item.welfareId}}" bindtap='itemSelect'>
+          <view class='{{"search-content-item-select "+(item.selected?"search-content-item-selected":"")}}'></view>
+          <text class='search-content-item-text'>{{item.welfareValue}}</text>
+        </view>
+      </block>
+    </view>
+    <!-- 已经选择的展示出来 -->
+    <view class='search-content'>
+      <block wx:for="{{search}}" wx:key="{{index}}">
+        <view class='search-have-item' id="{{item.tabIndex+'-'+item.id}}" bindtap='itemDelete'>{{item.value}}</view>
+      </block>
+    </view>
+    <view class='find'>
+      <view class='find-content'>
+        <view class='find-btn' bindtap='resetSearch'>重置</view>
+        <view class='find-btn' bindtap='openSearch'>关闭查找条件</view>
+        <view class='find-btn' bindtap='startSearch'>搜索</view>
+      </view>
+    </view>
+
+  </view>
+
+
+  <block wx:for="{{companys}}" wx:key="{{index}}">
+    <template is="companyitem" data="{{item}}"/>
+  </block>
+
+  <!-- <view class='kongbai'></view> -->
+
+</view>
+<view class="loadmore loading" wx:if="{{ hasMore }}">正在加载...</view>
+<view class="loadmore" wx:else>已经到底了</view>

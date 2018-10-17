@@ -1,0 +1,24 @@
+<view class='container'>
+  <view class='kongbai'></view>
+  <view class='item bkcolor1'>
+    <image class='item-icon1' src='https://lezaixy.com/images/weixin/icon/addPeople.png'></image>
+    <text class='item-text item-text-shorttab'>兼职状态</text>
+    <view class='item-btn'>
+      <switch checked='{{userPtjobstate}}' bindchange="userPtjobstateChange" color='#fff0f0'></switch>
+    </view>
+  </view>
+  <view class='item bkcolor2'>
+    <image class='item-icon2' src='https://lezaixy.com/images/weixin/icon/skill.png'></image>
+    <text class='item-text'>技能状态</text>
+    <view class='item-btn'>
+      <switch checked='{{userSkillstate}}' bindchange="userSkillstateChange" color='#fff0f0'></switch>
+    </view>
+  </view>
+  <view class='item bkcolor3'>
+    <image class='item-icon3' src='https://lezaixy.com/images/weixin/icon/job.png'></image>
+    <text class='item-text'>就业状态</text>
+    <view class='item-btn'>
+      <switch checked='{{userWorkstate}}' bindchange="userWorkstateChange" color='#fff0f0'></switch>
+    </view>
+  </view>
+</view>
