@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/first/first",
+    "pages/qiandao/qiandao",
+    "pages/index/index",
+    "pages/ptjob/ptjob",
+    "pages/signin/signin",
+    "pages/zhuce/zhuce",
+    "pages/me/me",
+    "pages/jianli/jianli",
+    "pages/circle/circle",
+    "pages/specialty/specialty",
+    "pages/honor/honor",
+    "pages/certificate/certificate",
+    "pages/intentionjob/intentionjob",
+    "pages/jiben/jiben",
+    "pages/study/study",
+    "pages/intention/intention",
+    "pages/intro/intro",
+    "pages/work/work",
+    "pages/notice/notice",
+    "pages/techang/techang",
+    "pages/referrer/referrer",
+    "pages/news_content/news_content",
+    "pages/company_detail/company_detail",
+    "pages/company_list/company_list",
+    "pages/recruiter_list/recruiter_list",
+    "pages/message/message",
+    "pages/state/state",
+    "pages/guize/guize",
+    "pages/news_list/news_list",
+    "pages/wenjuan/wenjuan",
+    "pages/nativeplace/nativeplace"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "乐在人才平台",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#e5e5e5",
+    "selectedColor": "#fcaf17",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/home1.png",
+        "selectedIconPath": "/images/home2.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/images/me1.png",
+        "selectedIconPath": "/images/me2.png"
+      },
+      {
+        "pagePath": "pages/state/state",
+        "text": "状态",
+        "iconPath": "/images/state1.png",
+        "selectedIconPath": "/images/state2.png"
+      }
+    ]
+  }
+}
