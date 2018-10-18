@@ -11,7 +11,7 @@ Page({
     levelIndex:0,
     levelProgress:0,
     //消息列表
-		recruiter:[],
+		recruiters:[],
     messages:[],
 		recruitertotal:0,
 		messagetotal:0,
