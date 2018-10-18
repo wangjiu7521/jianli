@@ -11,7 +11,10 @@ Page({
     levelIndex:0,
     levelProgress:0,
     //消息列表
-    messages:null,
+		recruiter:[],
+    messages:[],
+		recruitertotal:0,
+		messagetotal:0,
     signIn:false,
     userscore:null,
     userNum:null,
@@ -60,27 +63,7 @@ Page({
       "userPhotoUrl": userPhotoUrl,
       "user":user,
     });
-    wx.request({
-      url: getApp().globalData.domain + '/weixin/user/getResumeCompanyListByPage.action',
-      method: 'GET',
-      data: {
-        page: 1,
-        limit: 2,
-        userId:that.data.userId,
-      },
-      success: function (res) {
-        console.log(res.data)
-        if (res.data.msg == 'ok') {
-          var recruiters = res.data.page.list;
-          that.setData({
-            recruiters: recruiters.map((item) => that.initCompany(getApp().globalData.options, item)),
-            recruitertotal: res.data.page.total,
-          });
-          getApp().globalData.recruiters = recruiters;
-        }
-      }
-    });
-    
+
     //加载用户消息
   },
 
@@ -206,7 +189,29 @@ Page({
         }
       },
     })
-
+		wx.request({
+			url: getApp().globalData.domain + '/weixin/user/getResumeCompanyListByPage.action',
+			method: 'GET',
+			data: {
+				page: 1,
+				limit: 2,
+				userId: that.data.userId,
+			},
+			success: function (res) {
+				console.log(res.data)
+				if (res.data.msg == 'ok') {
+					if (that.data.recruitertotal != res.data.page.total){
+						var recruiters = res.data.page.list;
+						that.setData({
+							recruiters: recruiters.map((item) => that.initCompany(getApp().globalData.options, item)),
+							recruitertotal: res.data.page.total,
+						});
+						getApp().globalData.recruiters = recruiters;
+					}
+					
+				}
+			}
+		});
     wx.request({
       url: getApp().globalData.domain + "/weixin/message/getMessagesByUserIdWithPage.action",
       data: {
@@ -217,13 +222,15 @@ Page({
       success: function (res) {
         console.log(res.data);
         if (res.data.msg == 'ok') {
-          var messages = res.data.messagePage.list;
-          that.setData({
-            messages: messages,
-            messagetotal: res.data.messagePage.total,
-          });
-          getApp().globalData.messages = messages;
+					if (that.data.messagetotal != res.data.messagePage.total) {
+						var messages = res.data.messagePage.list;
+						that.setData({
+							messages: messages,
+							messagetotal: res.data.messagePage.total,
+						});
+						getApp().globalData.messages = messages;
         }
+				}
       },
     })
   },

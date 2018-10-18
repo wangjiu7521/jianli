@@ -451,7 +451,7 @@ App({
       return true;
     }
   },
-  //验证手机号
+  //验证QQ
   isQqAvailable: function(str) {
     var myreg = /^[1-9][0-9]{4,14}$/;
     if (!myreg.test(str)) {
@@ -460,7 +460,7 @@ App({
       return true;
     }
   },
-  //验证手机号
+  //验证Email
   isEmailAvailable: function(str) {
     var myreg = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
     if (!myreg.test(str)) {

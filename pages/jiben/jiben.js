@@ -233,6 +233,10 @@ Page({
       //名字获取焦点
       return false;
     }
+		if (that.data.jibenForm.userQq == null || that.data.jibenForm.userQq == '') {
+			getApp().showToast("QQ号没填哦亲", 'none');
+			return false;
+		}
     if (that.data.jibenForm.userQq != '' && !getApp().isQqAvailable(that.data.jibenForm.userQq)) {
       getApp().showToast("QQ号格式不对哦亲", 'none');
       //名字获取焦点
