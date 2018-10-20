@@ -13,6 +13,7 @@ Page({
   onLoad: function (options) {
     _self = this;
     //获取缓存新闻数据
+		wx.showLoading({ title: "加载中" });
     try {
       var news = getApp().globalData.news;
       if (news) {
@@ -34,11 +35,12 @@ Page({
     }
     try{
       WxParse.wxParse('article', 'html', _self.data.data.newsContent, _self, 0);
+			
     } catch (e) {
       console.log(e)
       console.log("解析富文本失败！")
     }
-   
+		
     //刷新访问量
     wx.request({
       url: getApp().globalData.domain + '/weixin/user/updatePageview.action',
@@ -47,11 +49,15 @@ Page({
         newsId: options.newsID
       },
       success:function(res){
+				wx.hideLoading();
         console.log(res.data)
         _self.setData({
           newsPageview: res.data.newsPageview
         })
-      }
+      },
+			complete:()=>{
+				wx.hideLoading();
+			}
     })
 
   },

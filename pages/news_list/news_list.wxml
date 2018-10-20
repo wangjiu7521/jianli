@@ -1,16 +1,22 @@
-<import src="../../templates/newsitem.wxml"/>
+<import src="../../templates/newsitem.wxml" />
 
 <view class='container'>
   <view class='find'>
     <view class='find-content'>
-      <view id='1' class='find-btn' hover-class='btn-hover'  bindtap='btnclick'>每日兼职</view>
-      <view id='2' class='find-btn' hover-class='btn-hover'  bindtap='btnclick'>全职招聘</view>
-      <view id='3' class='find-btn' hover-class='btn-hover'  bindtap='btnclick'>乐在动态</view>
+      <view class='find-btn'>
+        <view id='1' class='hover' hover-class='btn-hover' bindtap='btnclick'>每日兼职</view>
+      </view>
+      <view class='find-btn'>
+        <view id='2' class='hover' hover-class='btn-hover' bindtap='btnclick'>全职招聘</view>
+      </view>
+      <view class='find-btn'>
+        <view id='3' class='hover' hover-class='btn-hover' bindtap='btnclick'>乐在动态</view>
+      </view>
     </view>
   </view>
 
   <block wx:for="{{news}}" wx:key="{{index}}">
-     <template is="newsitem" data="{{item}}"/>
+    <template is="newsitem" data="{{item}}" />
   </block>
 
   <!-- <view class='kongbai'></view> -->

@@ -38,7 +38,7 @@
   </navigator>
 <scroll-view class='company-scroll' scroll-x="{{true}}"  >
   <view class='company-block' wx:for="{{companys}}" wx:key="{{index}}">
-    <navigator  class='company' url='/pages/company_detail/company_detail?companyID={{item.companyId}}'>
+    <navigator  class='company' url='/pages/company_detail/company_detail?companyID={{item.companyId}}&companyType={{item.companyType}}'>
       <view class='company-logo'>
       <image src='{{"https://lezaixy.com"+item.companyLogo}}' mode="aspectFill"></image>
       </view>

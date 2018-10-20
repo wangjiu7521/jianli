@@ -90,6 +90,7 @@ Page({
       item1.intentionjobValue = intentionjobs.filter((item2) => item1.intentionjobId == item2.intentionjobId)[0].intentionjobValue;
       return item1
     })
+		company.companyType = "resume" // 简历页面
     company.companyUpdatetime = company.recruiter.updatetime;
     return company;
   },

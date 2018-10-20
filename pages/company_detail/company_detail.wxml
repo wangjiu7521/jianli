@@ -50,11 +50,14 @@
         <view class='icon'>
           <image src='https://lezaixy.com/images/weixin/icon/addr.png' mode='aspectFit'></image>
         </view>
-        <text decode='{{true}}' class='item-text'>{{data.address+(data.addressDetail||"")}}</text>
+        <text decode='{{true}}' class='item-text address-text'>{{data.address+(data.addressDetail||"")}}</text>
       </view>
 
       <view class='lezai-divider'></view>
-      <view class='content-lable'>招聘岗位</view>
+      <view class='content-lable'>招聘信息</view>
+      <view class='item'>
+        <text decode='{{true}}' class='item-lable'>招聘岗位</text>
+      </view>
       <view class='recruiterjob'>
         <block wx:for="{{data.jobs}}" wx:key="{{index}}">
           <view class='jobitem'>
@@ -62,8 +65,6 @@
           </view>
         </block>
       </view>
-      <view class='lezai-divider'></view>
-      <view class='content-lable'>招聘信息</view>
       <view class='item'>
         <text decode='{{true}}' class='item-lable'>招聘人数</text>
         <text decode='{{true}}' class='item-text'>{{data.recruitCount}}</text>
@@ -83,8 +84,9 @@
       </view>
       <view class='lezai-divider'></view>
       <view class='btn-container'>
-        <view class='btn left-btn' bindtap='submit'>投递</view>
-        <view class='btn right-btn' bindtap='cancel'>取消</view>
+        <view class='btn send-btn'>
+          <view class='hover' hover-class='btn-hover' bindtap='{{!sended?"submit":"cancel"}}'>{{!sended?"投递简历":"撤销简历"}}</view>
+        </view>
       </view>
     </view>
   </view>

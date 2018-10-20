@@ -36,7 +36,7 @@ Page({
         if (res.data.msg == 'ok') {
           var companys = res.data.page.list;
           _self.setData({
-            companys: res.data.page.list,
+						companys: res.data.page.list.map((item) => that.initCompany(item)),
           });
           getApp().globalData.companys = companys;
         }
@@ -71,4 +71,8 @@ Page({
     return getApp().getShareAppMessage(options);
   },
 
+	initCompany: (company) => {
+		company.companyType = "company" //合作企业
+		return company;
+	},
 })

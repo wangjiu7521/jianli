@@ -1,5 +1,5 @@
 <template name="companyitem">
-  <navigator class='companyitem' url='/pages/company_detail/company_detail?companyID={{item.companyId}}'>
+  <navigator class='companyitem' url='/pages/company_detail/company_detail?companyID={{item.companyId}}&companyType={{item.companyType}}'>
     <view class='detail-logo'>
       <image src='{{"https://lezaixy.com"+item.companyLogo}}' mode="aspectFill"></image>
     </view>

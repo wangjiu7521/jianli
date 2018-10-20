@@ -3,31 +3,34 @@ Page({
   data: {
     URL: getApp().globalData.domain,
     data: null,
+		sended:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function (props) {
     var that = this;
-    
+		var companyType = props.companyType;
     //获取缓存公司数据
+		var companys = []
+		if (companyType == null ||companyType === "company" )
+			companys = getApp().globalData.companys
+		else if (companyType === "resume")
+			companys = getApp().globalData.recruiters
     try {
-      var companys = getApp().globalData.companys
       if (companys) {
-        
         for (var i = 0; i < companys.length; i++) {
-          if (options.companyID == companys[i].companyId) {
+					if (props.companyID == companys[i].companyId) {
             wx.setNavigationBarTitle({
               title: companys[i].companyName,
             })
+						that.checkSended(companys[i].companyId);//检查是否投递过这家公司
             that.initCompany(getApp().globalData.options, companys[i]);
             that.setData({
               data: companys[i],
               companyId: companys[i].companyId
             })
-            console.log("企业详情")
-            console.log(companys[i])
             break;
           }
         }
@@ -37,6 +40,24 @@ Page({
     }
   },
 
+	checkSended:function(companyId){
+		var that = this;
+		wx.request({
+			url: getApp().globalData.domain + '/weixin/user/checkSended.action',
+			data: {
+				userId: getApp().globalData.userId,
+				companyId:companyId
+			},
+			success: (res) => {
+				console.log(res.data);
+				if (res.data.msg == 'ok') {
+					that.setData({
+						sended: res.data.sended
+					});
+				}
+			},
+		});
+	},
   //不是纯函数
   initCompany:(options,company)=>{
     var { wages, companycategorys, companysizes, intentionjobs } = options
@@ -61,32 +82,59 @@ Page({
       getApp().showToast('您的就业信息未填写，不能投递简历', 'none');
       return;
     }
+		if (user.checkstateId != 3) {
+			getApp().showToast('您的信息还未通过审核，暂时不能投递简历', 'none');
+			return;
+		}
     if (user.userWorkstate!=2) {
-      getApp().showToast('您的就业状态未开启，不能投递简历', 'none');
-      return;
+			getApp().showModal(
+				'提示',
+				'您的就业状态处于关闭状态，无法投递简历，是否打开就业状态',
+				function () {
+					wx.request({
+						url: getApp().globalData.domain + "/weixin/user/updateWorkState.action",
+						data: {
+							"userId": that.data.userId,
+							"userWorkstate": 2,
+						},
+						success: function (res) {
+							console.log(res.data);
+							if (res.data.msg == 'ok') {
+								getApp().globalData.user.userWorkstate = res.data.state;
+								user.userWorkstate = res.data.state
+								that.sendResume();//开始投递简历
+							}
+						},
+					})
+				},
+				()=>{});
+				return;
     }
-    if (user.checkstateId!=3){
-      getApp().showToast('您的信息还未通过审核，暂时不能投递简历', 'none');
-      return;
-    }
-    wx.showLoading({ title: "投递中" });
-    wx.request({
-      url: getApp().globalData.domain + '/weixin/user/sendResume.action',
-      data: {
-        userId:user.userId,
-        companyId:that.data.companyId
-      },
-      success: function (res) {
-        wx.hideLoading()
-        if (res.data.msg == 'ok') {
-          getApp().showToast('简历投递成功！');
-        }else{
-          getApp().showToast('简历投递失败！');
-        }
-      },
-
-    });
+		that.sendResume();//开始投递简历
   },
+	sendResume:function(){
+		var that = this
+		wx.showLoading({ title: "投递中" });
+		wx.request({
+			url: getApp().globalData.domain + '/weixin/user/sendResume.action',
+			data: {
+				userId: getApp().globalData.userId,
+				companyId: that.data.companyId
+			},
+			success: function (res) {
+				wx.hideLoading()
+				if (res.data.msg == 'ok') {
+					that.setData({
+						sended: true
+					});
+					getApp().showToast('简历投递成功！');
+				} else {
+					getApp().showToast('简历投递失败！');
+				}
+			},
+
+		});
+	},
   cancel:function(){
     var that = this
     var { user } = getApp().globalData
@@ -100,6 +148,9 @@ Page({
       success: function (res) {
         wx.hideLoading()
         if (res.data.msg == 'ok') {
+					that.setData({
+						sended: false
+					});
           getApp().showToast('简历已撤销！');
         }
       },
