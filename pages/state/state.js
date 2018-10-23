@@ -405,4 +405,7 @@ Page({
     var that = this;
     return getApp().getShareAppMessage(options);
   },
+	voidfun: function () {
+		getApp().showToast("该功能暂未开放", 'none');
+	},
 })

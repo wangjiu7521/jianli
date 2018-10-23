@@ -44,10 +44,14 @@
     <image class='caidan-icon' src='https://lezaixy.com/images/weixin/icon/jianli.png'></image>
     <text class='icon-text'>兼职信息</text>
   </navigator>
-  <navigator class='caidan-btn' url='/pages/techang/techang'>
+	<view class='caidan-btn' hover-class='btn-hover'  bindtap='voidfun'>
     <image class='caidan-icon' src='https://lezaixy.com/images/weixin/icon/zhuangtai.png'></image>
     <text class='icon-text'>技能信息</text>
-  </navigator>
+  </view>
+  <!-- <navigator class='caidan-btn' url='/pages/techang/techang'>
+    <image class='caidan-icon' src='https://lezaixy.com/images/weixin/icon/zhuangtai.png'></image>
+    <text class='icon-text'>技能信息</text>
+  </navigator> -->
   <navigator class='caidan-btn' url='/pages/jianli/jianli'>
     <image class='caidan-icon' src='https://lezaixy.com/images/weixin/icon/tiezi.png'></image>
     <text class='icon-text'>就业信息</text>

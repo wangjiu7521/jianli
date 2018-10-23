@@ -10,8 +10,9 @@
   <view class='item bkcolor2'>
     <image class='item-icon2' src='https://lezaixy.com/images/weixin/icon/skill.png'></image>
     <text class='item-text'>技能状态</text>
-    <view class='item-btn'>
-      <switch checked='{{userSkillstate}}' bindchange="userSkillstateChange" color='#fff0f0'></switch>
+    <view class='item-btn' bindtap="voidfun">
+		<switch checked='{{userSkillstate}}' disabled color='#fff0f0'></switch>
+      <!-- <switch checked='{{userSkillstate}}'  bindchange="userSkillstateChange" color='#fff0f0'></switch> -->
     </view>
   </view>
   <view class='item bkcolor3'>

@@ -18,6 +18,8 @@ Page({
     wx.navigateTo({
       url: '../../pages/jiben/jiben?zhuce='+id,
     })
-  }
-
+  },
+	voidfun: function () {
+		getApp().showToast("该功能暂未开放", 'none');
+	},
 })
